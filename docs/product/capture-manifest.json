@@ -1,0 +1,222 @@
+{
+  "capturedAt": "2026-10-21T23:01:40.229Z",
+  "environment": "production",
+  "origin": "https://bn.sid.mom",
+  "readOnly": true,
+  "redactions": [
+    "credential masks",
+    "password fields"
+  ],
+  "screenshots": [
+    {
+      "file": "01-login.png",
+      "caption": "管理员登录 / Administrator sign-in",
+      "path": "/overview",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "02-overview-light.png",
+      "caption": "生产运行总览（浅色）/ Production overview, light",
+      "path": "/overview",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "03-overview-dark.png",
+      "caption": "生产运行总览（深色）/ Production overview, dark",
+      "path": "/overview",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "dark"
+    },
+    {
+      "file": "04-accounts.png",
+      "caption": "多账号与独立随机计划 / Accounts and independent schedules",
+      "path": "/accounts",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "05-account-schedule.png",
+      "caption": "账号随机周期与下一次执行 / Per-account random interval",
+      "path": "/accounts",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "06-preset-weights.png",
+      "caption": "多预设权重和有效概率 / Weighted preset bindings",
+      "path": "/accounts",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "07-key-only-import.png",
+      "caption": "只需 API Key 的批量导入（空表单）/ Key-only import, empty form",
+      "path": "/accounts",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "08-preset-library.png",
+      "caption": "十种内容与生图预设 / Ten content and image playbooks",
+      "path": "/presets",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "09-preset-editor.png",
+      "caption": "内容预设与字数、文风约束 / Versioned content rules",
+      "path": "/presets",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "10-image-rules.png",
+      "caption": "预设配套的图片模型和风格 / Per-preset image generation rules",
+      "path": "/presets",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "11-posts.png",
+      "caption": "真实发布记录与搜索 / Actual posts and search",
+      "path": "/posts",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "12-post-detail.png",
+      "caption": "正文、配图、来源及发布回执 / Post, image, sources and receipt",
+      "path": "/posts",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "13-media-library.png",
+      "caption": "托管图库及 AI 配图 / Managed library and generated images",
+      "path": "/media",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "14-jobs.png",
+      "caption": "任务状态、排队与错误记录 / Job states, queues and errors",
+      "path": "/jobs",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "15-job-events.png",
+      "caption": "任务阶段时间线 / Per-job event timeline",
+      "path": "/jobs",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "16-model-connections.png",
+      "caption": "明确的文字、图片模型与协议连接 / Explicit model and protocol configuration",
+      "path": "/settings?section=models",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "17-news-market-sources.png",
+      "caption": "金色、律动与币安现货来源 / Jinse, BlockBeats and Binance spot sources",
+      "path": "/settings?section=sources",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "18-runtime-controls.png",
+      "caption": "并发、内容校验模式与 Worker / Runtime controls and worker",
+      "path": "/settings?section=runtime",
+      "viewport": {
+        "width": 1600,
+        "height": 1050
+      },
+      "theme": "light"
+    },
+    {
+      "file": "19-mobile-overview.png",
+      "caption": "移动端总览 / Mobile overview",
+      "path": "/overview",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light"
+    },
+    {
+      "file": "20-mobile-accounts.png",
+      "caption": "移动端账号 / Mobile accounts",
+      "path": "/accounts",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light"
+    }
+  ],
+  "pageErrors": [],
+  "blockedMutations": [],
+  "runtime": {
+    "contentValidationMode": "publish_first",
+    "paused": false,
+    "publishTransportEnabled": true
+  },
+  "passed": true,
+  "browserClosed": true,
+  "finishedAt": "2026-10-21T23:02:40.839Z"
+}

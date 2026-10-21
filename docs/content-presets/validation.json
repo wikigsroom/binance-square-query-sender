@@ -1,0 +1,140 @@
+{
+  "packId": "diverse-10-20261022",
+  "checkedAt": "2026-10-21T23:27:11.961Z",
+  "sha256": "f3e6ae1b6a415775a26edeaf6228a9474378bea73c8dae792e88600ef93e4be2",
+  "schema": "square-service parseRules",
+  "status": "passed",
+  "count": 10,
+  "checks": [
+    {
+      "key": "meme-club",
+      "name": "Meme 整活｜狗狗与青蛙",
+      "status": "passed",
+      "preferredCharacters": [
+        100,
+        180
+      ],
+      "hardLimit": 220,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "原创 Meme 涂鸦贴纸"
+    },
+    {
+      "key": "market-whiplash",
+      "name": "涨跌榜现场｜散户碎碎念",
+      "status": "passed",
+      "preferredCharacters": [
+        140,
+        230
+      ],
+      "hardLimit": 280,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "对比鲜明的3D微缩场景"
+    },
+    {
+      "key": "news-desk",
+      "name": "News 拆解｜消息到底改变了什么",
+      "status": "passed",
+      "preferredCharacters": [
+        350,
+        650
+      ],
+      "hardLimit": 800,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "克制的新闻编辑拼贴"
+    },
+    {
+      "key": "feature-essay",
+      "name": "精品长文｜把一件事讲透",
+      "status": "passed",
+      "preferredCharacters": [
+        1200,
+        1800
+      ],
+      "hardLimit": 2000,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "杂志专题封面的手工拼贴"
+    },
+    {
+      "key": "bitcoin-macro",
+      "name": "比特币宏观｜资金为什么动",
+      "status": "passed",
+      "preferredCharacters": [
+        400,
+        700
+      ],
+      "hardLimit": 900,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "纪实静物质感的金融概念摄影"
+    },
+    {
+      "key": "ethereum-defi",
+      "name": "以太坊与 DeFi｜收益从哪里来",
+      "status": "passed",
+      "preferredCharacters": [
+        450,
+        750
+      ],
+      "hardLimit": 950,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "流动性管道与建筑剖面的技术插画"
+    },
+    {
+      "key": "solana-ecosystem",
+      "name": "Solana 生态｜热闹有没有留下用户",
+      "status": "passed",
+      "preferredCharacters": [
+        320,
+        550
+      ],
+      "hardLimit": 700,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "夜色城市与链上网络的赛博插画"
+    },
+    {
+      "key": "ai-depin",
+      "name": "AI 与 DePIN｜先看需求再听故事",
+      "status": "passed",
+      "preferredCharacters": [
+        450,
+        700
+      ],
+      "hardLimit": 900,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "精密机器与分布式算力的产品摄影感插画"
+    },
+    {
+      "key": "gamefi-products",
+      "name": "GameFi 与应用｜先好玩再谈代币",
+      "status": "passed",
+      "preferredCharacters": [
+        350,
+        600
+      ],
+      "hardLimit": 750,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "原创游戏世界的叙事概念插画"
+    },
+    {
+      "key": "risk-counterpoint",
+      "name": "逆向审视｜热闹里找漏洞",
+      "status": "passed",
+      "preferredCharacters": [
+        320,
+        550
+      ],
+      "hardLimit": 700,
+      "imageMode": "generate",
+      "imageFallback": "block",
+      "imageStyle": "悬疑感的建筑结构隐喻"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "completedAt": "2026-10-21T20:42:54.864946+00:00",
+  "release": "20261022-key-import",
+  "repositories": {
+    "square-service": {
+      "commit": "bec3b9e30288ba03df615ad594a141a625bb5417",
+      "workingTreeClean": true
+    },
+    "square-dashboard": {
+      "commit": "74d6844cc95e2c5be3179e0df9b2736591ece58f",
+      "workingTreeClean": true
+    }
+  },
+  "builds": {
+    "backend": "passed",
+    "dashboard": "passed"
+  },
+  "tests": {
+    "backend": {
+      "passed": 53,
+      "failed": 0
+    },
+    "browser": {
+      "existingCasesPassed": 11,
+      "newImportCasePassed": 1,
+      "unresolvedFailures": 0,
+      "note": "New import assertion initially failed on optional JSX whitespace; regex corrected and the case rerun successfully. Application behavior unchanged."
+    }
+  },
+  "production": {
+    "url": "https://bn.sid.mom/accounts",
+    "browserPassed": true,
+    "serviceState": "active/running",
+    "apiPort": 39410,
+    "releasePath": "/opt/square-platform/releases/20261022-key-import",
+    "backupPath": "/opt/square-platform/backups/20261022-key-import",
+    "existingModelConnectionsPreserved": 2,
+    "globalPublishingPaused": true,
+    "realModelCallsForVerification": 0,
+    "publicationsForVerification": 0,
+    "productionTestAccountsCreated": 0
+  },
+  "artifact": {
+    "file": "20261022-key-import.tar.gz",
+    "sha256": "93b9181579a4ea3fe3262595ab84dd32b405965511d93a1324c617bcbefeb6e1",
+    "bytes": 186668
+  },
+  "browserClosed": true
+}

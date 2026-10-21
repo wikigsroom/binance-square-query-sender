@@ -1,0 +1,34 @@
+{
+  "capturedAt": "2026-10-20T10:09:30.899Z",
+  "url": "http://localhost:4300",
+  "environment": "Isolated development fixture, no real model or publication. Actual screenshots of running UI and API.",
+  "viewport": {
+    "desktop": [
+      1440,
+      1000
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  },
+  "captureMode": "Full document at scroll origin; open dialogs use the viewport.",
+  "screenshots": [
+    "overview.png",
+    "accounts.png",
+    "presets.png",
+    "media.png",
+    "posts.png",
+    "jobs.png",
+    "settings.png",
+    "ai-connection.png",
+    "ai-model-discovery.png",
+    "settings-dark.png",
+    "overview-dark.png",
+    "account-weights.png",
+    "prompt-lineage.png",
+    "mobile-accounts.png",
+    "mobile-settings.png"
+  ],
+  "pageErrors": []
+}

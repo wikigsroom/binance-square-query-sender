@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-21T20:38:50.897Z",
+  "url": "https://bn.sid.mom/accounts",
+  "pageErrors": [],
+  "requestErrors": [
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "error": "csp"
+    }
+  ],
+  "checks": {
+    "onlyOneKeyField": true,
+    "emptySubmitDisabled": true,
+    "keyOnlyRequestAccepted": true,
+    "invalidKeyRejectedWithoutNameRequirement": true,
+    "keyInputCleared": true,
+    "mobileNoHorizontalOverflow": true,
+    "noProductionAccountsCreated": true
+  },
+  "passed": true,
+  "browserClosed": true
+}

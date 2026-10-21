@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "recordedAt": "2026-10-20T10:13:59.917684+00:00",
+  "classification": "Isolated development checks, not deployment or formal acceptance",
+  "backend": {
+    "command": "npm test",
+    "passed": 43,
+    "failed": 0,
+    "build": "passed"
+  },
+  "dashboard": {
+    "command": "npm test",
+    "passed": 8,
+    "failed": 0,
+    "build": "passed"
+  },
+  "uiAudit": {
+    "command": "node scripts/audit-ui.mjs",
+    "checkedAt": "2026-10-20T10:02:05.049Z",
+    "combinations": 56,
+    "widths": [
+      375,
+      768,
+      1024,
+      1440
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "pageErrors": 0,
+    "documentOverflow": 0,
+    "testedTextContrastIssues": 0,
+    "fullAccessibilityAudit": false
+  },
+  "screenshots": {
+    "command": "node scripts/capture.mjs",
+    "capturedAt": "2026-10-20T10:09:30.899Z",
+    "count": 15,
+    "pageErrors": 0
+  },
+  "realModelCalls": false,
+  "realPublications": false,
+  "realCredentialImport": false,
+  "notVerified": [
+    "Target server deployment",
+    "Native PostgreSQL multi-process/load behavior",
+    "Actual remote provider/model and Square compatibility",
+    "Formal business acceptance"
+  ]
+}

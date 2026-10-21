@@ -1,0 +1,8 @@
+{
+  "accounts": [
+    {
+      "name": "example-account",
+      "apiKey": "REPLACE_LOCALLY_ONLY"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://bn.sid.mom",
+  "pageErrors": [],
+  "apiErrors": [
+    {
+      "url": "https://bn-api.sid.mom/api/v1/auth/me",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "apiOrigin": "https://bn-api.sid.mom",
+  "frontendLoaded": true,
+  "status": 200,
+  "title": "Square Desk · 币安广场管理",
+  "apiProxyPending": true,
+  "visibleStatus": "无法连接后端，请检查服务状态。\nAPI_UNREACHABLE\n重新连接"
+}

@@ -1,0 +1,175 @@
+{
+  "startedAt": "2026-10-21T21:52:20.059496+00:00",
+  "status": "enabled",
+  "accounts": [
+    {
+      "id": "acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0",
+      "name": "广场账号 54C65AD8",
+      "copied": true,
+      "status": "active",
+      "blockReason": null,
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "anchorAt": "2026-10-21T21:52:21.920Z",
+      "sampledDelaySeconds": 1679,
+      "nextDueAt": "2026-10-21T22:20:20.920Z"
+    },
+    {
+      "id": "acct_b1a08e6c-19b4-4f7c-b019-f6f508ce02a1",
+      "name": "广场账号 FA001600",
+      "copied": true,
+      "status": "active",
+      "blockReason": null,
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "anchorAt": "2026-10-21T21:52:21.922Z",
+      "sampledDelaySeconds": 1698,
+      "nextDueAt": "2026-10-21T22:20:39.922Z"
+    },
+    {
+      "id": "acct_10851332-9d22-4429-a341-64788ada2f6b",
+      "name": "广场账号 0CD9112F",
+      "copied": true,
+      "status": "active",
+      "blockReason": null,
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "anchorAt": "2026-10-21T21:52:21.923Z",
+      "sampledDelaySeconds": 2231,
+      "nextDueAt": "2026-10-21T22:29:32.923Z"
+    },
+    {
+      "id": "acct_5c3acb13-16d8-40f8-b265-5b29a78a6d3d",
+      "name": "广场账号 24AC680C",
+      "copied": true,
+      "status": "active",
+      "blockReason": null,
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "anchorAt": "2026-10-21T21:52:21.925Z",
+      "sampledDelaySeconds": 1728,
+      "nextDueAt": "2026-10-21T22:21:09.925Z"
+    },
+    {
+      "id": "acct_8b923503-569a-4065-a375-bcc43ba37e7f",
+      "name": "广场账号 DC03F2A6",
+      "copied": true,
+      "status": "active",
+      "blockReason": null,
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "anchorAt": "2026-10-21T21:52:21.927Z",
+      "sampledDelaySeconds": 2196,
+      "nextDueAt": "2026-10-21T22:28:57.927Z"
+    },
+    {
+      "id": "acct_0d4de6ea-7e6a-4e37-9e76-9dfe3df0ba7a",
+      "name": "广场账号 A13F724B",
+      "copied": true,
+      "status": "active",
+      "blockReason": null,
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "anchorAt": "2026-10-21T21:52:21.929Z",
+      "sampledDelaySeconds": 1530,
+      "nextDueAt": "2026-10-21T22:17:51.929Z"
+    },
+    {
+      "id": "acct_042f5d47-f905-405b-a4b3-69900a855300",
+      "name": "广场账号 96FE2F7F",
+      "copied": true,
+      "status": "active",
+      "blockReason": null,
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "anchorAt": "2026-10-21T21:52:21.935Z",
+      "sampledDelaySeconds": 1672,
+      "nextDueAt": "2026-10-21T22:20:13.935Z"
+    }
+  ],
+  "sampleAccountId": "acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0",
+  "sampleAccountName": "广场账号 54C65AD8",
+  "minIntervalSeconds": 1200,
+  "maxIntervalSeconds": 2400,
+  "templateBindings": [
+    {
+      "id": "preset_1940aaea-527b-439a-ac4d-e3b34834e402",
+      "name": "逆向审视｜热闹里找漏洞",
+      "weight": 1,
+      "publishedVersionId": "preset_version_7595761a-60d3-488f-8d3c-8b18459b3948",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    },
+    {
+      "id": "preset_3f45a874-f4c7-48ad-9508-998ebe2c10d5",
+      "name": "GameFi 与应用｜先好玩再谈代币",
+      "weight": 1,
+      "publishedVersionId": "preset_version_b7a2f95d-0bd5-4dbe-a536-6bd60bf492cd",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    },
+    {
+      "id": "preset_b02bd30f-24ae-441e-a395-aa71704a25f0",
+      "name": "AI 与 DePIN｜先看需求再听故事",
+      "weight": 1,
+      "publishedVersionId": "preset_version_b31b9ab5-e1aa-4be9-9a91-65ae2b9bb613",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    },
+    {
+      "id": "preset_1ca4e132-f468-42c3-8e70-bc2e72c8cc7a",
+      "name": "Solana 生态｜热闹有没有留下用户",
+      "weight": 1,
+      "publishedVersionId": "preset_version_fefb951c-f56e-4ecc-82c3-b4ed564710ec",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    },
+    {
+      "id": "preset_4cbeef6c-e679-4158-9a86-75f9e237ecd1",
+      "name": "以太坊与 DeFi｜收益从哪里来",
+      "weight": 1,
+      "publishedVersionId": "preset_version_4e0b5edd-0f7c-4eff-bdd8-7ef72851f746",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    },
+    {
+      "id": "preset_86cf9cda-599f-4dac-9288-dd7635ae24c1",
+      "name": "比特币宏观｜资金为什么动",
+      "weight": 1,
+      "publishedVersionId": "preset_version_5acb8b13-3a17-4f8c-9a59-de27d253c959",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    },
+    {
+      "id": "preset_abc074e6-8ba4-48b5-98c0-cf6ba38f59af",
+      "name": "精品长文｜把一件事讲透",
+      "weight": 1,
+      "publishedVersionId": "preset_version_7f6d779f-4dc5-4f4c-9fac-f1bee8439958",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    },
+    {
+      "id": "preset_b88a9787-e0c0-4ea0-a22a-dae1e4b92b32",
+      "name": "News 拆解｜消息到底改变了什么",
+      "weight": 1,
+      "publishedVersionId": "preset_version_c0857cd2-90c9-4775-95e8-b2b9c23a06fa",
+      "textModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "imageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "imageMode": "generate"
+    }
+  ],
+  "accountCount": 7,
+  "backup": "/opt/square-platform/backups/enable-auto-20261021T215220Z",
+  "enabledAt": "2026-10-21T21:52:22.179175+00:00",
+  "globallyPaused": false,
+  "publishTransportEnabled": true,
+  "workerState": "running",
+  "manualPublicationsTriggered": 0
+}

@@ -1,0 +1,55 @@
+{
+  "completedAt": "2026-10-21T19:51:14.233682+00:00",
+  "release": "20261022-sources",
+  "repositories": {
+    "square-service": {
+      "commit": "30547b6d1f4d07eb9681bb6f98a8a30d913fca80",
+      "workingTreeClean": true
+    },
+    "square-dashboard": {
+      "commit": "e4123c67a05239c34043b48d57a939e6b74ca783",
+      "workingTreeClean": true
+    }
+  },
+  "builds": {
+    "backend": "passed",
+    "dashboard": "passed"
+  },
+  "tests": {
+    "backend": {
+      "passed": 52,
+      "failed": 0
+    },
+    "chromium": {
+      "passed": 11,
+      "failed": 0
+    }
+  },
+  "production": {
+    "url": "https://bn.sid.mom/settings?section=sources",
+    "serverVerification": "passed",
+    "browserVerification": true,
+    "service": "square-platform.service",
+    "serviceState": "active/running",
+    "apiPort": 39410,
+    "unauthenticatedApiStatus": 401,
+    "releasePath": "/opt/square-platform/releases/20261022-sources",
+    "backupPath": "/opt/square-platform/backups/20261022-sources",
+    "existingModelConnectionsPreserved": 2,
+    "globallyPaused": true,
+    "publishTransportEnabled": false,
+    "realModelCallsForVerification": 0,
+    "publicationsForVerification": 0
+  },
+  "artifact": {
+    "file": "20261022-sources.tar.gz",
+    "bytes": 186125,
+    "sha256": "a52f0e23b8625a988204706b3f4e98846ff1697cd1177e205658777efd9d670d"
+  },
+  "limitations": [
+    "Recent material scan: up to three pages per news source; not a historical archive.",
+    "BlockBeats official RSS returned empty content; official public channel used and labeled with canonical and evidence links.",
+    "One existing Cloudflare analytics beacon is blocked by CSP; application API requests and page JavaScript passed."
+  ],
+  "browserClosed": true
+}

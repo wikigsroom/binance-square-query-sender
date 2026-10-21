@@ -1,0 +1,38 @@
+{
+  "name": "square-service",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.14"
+  },
+  "scripts": {
+    "dev": "tsx --env-file-if-exists=.env src/main.ts",
+    "build": "tsc && node scripts/build-assets.mjs",
+    "start": "node --env-file-if-exists=.env dist/src/main.js",
+    "worker": "tsx --env-file-if-exists=.env src/worker-main.ts",
+    "init": "tsx --env-file-if-exists=.env scripts/init.ts",
+    "migrate:legacy": "tsx --env-file-if-exists=.env scripts/migrate-legacy.ts",
+    "check": "tsc --noEmit",
+    "test": "tsx --test --test-concurrency=1 tests/*.test.ts",
+    "workbench": "tsx scripts/workbench.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.14",
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/multipart": "^9.2.1",
+    "cheerio": "^1.2.0",
+    "fastify": "^5.6.1",
+    "pg": "^8.16.3",
+    "sharp": "^0.34.4",
+    "undici": "^7.16.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.12",
+    "@types/pg": "^8.15.5",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

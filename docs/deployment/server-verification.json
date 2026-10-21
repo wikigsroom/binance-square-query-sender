@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-21T18:42:07Z",
+  "frontendPath": "/www/wwwroot/bn.sid.mom",
+  "frontendOrigin": "https://bn.sid.mom",
+  "apiOrigin": "https://bn-api.sid.mom",
+  "apiBind": "0.0.0.0:39410",
+  "service": [
+    "MainPID=3648689",
+    "NRestarts=0",
+    "MemoryCurrent=43106304",
+    "ActiveState=active",
+    "SubState=running"
+  ],
+  "login": "passed",
+  "session": "passed",
+  "csrf": "passed",
+  "corsPreflight": "passed",
+  "secureHostOnlyCookie": "passed",
+  "database": "native PostgreSQL 16 (port 5433), dedicated square_platform database and role",
+  "worker": "running",
+  "globallyPaused": true,
+  "publishTransportEnabled": false,
+  "staticSpaFallback": "passed",
+  "runtimeApiConfig": "passed",
+  "apiDomainProxy": "left unchanged for owner configuration",
+  "realModelCalls": 0,
+  "realPublications": 0
+}

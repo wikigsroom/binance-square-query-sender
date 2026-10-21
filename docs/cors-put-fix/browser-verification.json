@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-21T21:39:30.697Z",
+  "url": "https://bn.sid.mom/accounts",
+  "preflights": [
+    {
+      "path": "/accounts/acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0/preset-bindings",
+      "status": 204,
+      "allowedMethods": "GET, HEAD, POST, PUT, PATCH, DELETE"
+    },
+    {
+      "path": "/accounts/acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0/schedule",
+      "status": 204,
+      "allowedMethods": "GET, HEAD, POST, PUT, PATCH, DELETE"
+    }
+  ],
+  "browserWrites": [
+    {
+      "path": "/accounts/acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0/preset-bindings",
+      "status": 409,
+      "code": "CONFIG_VERSION_CONFLICT",
+      "responseReadableAcrossOrigins": true,
+      "configurationUnchanged": true
+    },
+    {
+      "path": "/accounts/acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0/schedule",
+      "status": 409,
+      "code": "CONFIG_VERSION_CONFLICT",
+      "responseReadableAcrossOrigins": true,
+      "configurationUnchanged": true
+    }
+  ],
+  "pageErrors": [],
+  "requestErrors": [],
+  "passed": true,
+  "browserClosed": true
+}

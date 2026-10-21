@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Taipei",
+  "release": "20261022-cors-put",
+  "status": "passed",
+  "commits": {
+    "service": "7f585aef1f7fdbb0b6af571b524fdd87bc066aaf",
+    "dashboard": "bbc849c30a839603de18c38a1caf19fe3e3f9183"
+  },
+  "checks": {
+    "regressionBeforeFix": "HTTP 403 instead of 204 reproduced locally and on the production backend",
+    "backendBuild": "passed",
+    "backendTests": { "passed": 54, "failed": 0 },
+    "frontendBuild": "passed",
+    "crossOriginBrowserTests": { "passed": 2, "failed": 0 },
+    "localBrowserPersistence": "Saved a changed preset weight, reopened the account, verified the stored value and restored the original weight",
+    "productionPreflight": "Both preset-bindings and schedule return HTTP 204 with PUT allowed",
+    "productionBrowserPut": "Authenticated browser PUT receives a readable CONFIG_VERSION_CONFLICT response for deliberately stale versions; settings remain unchanged",
+    "productionAccountsChanged": false,
+    "localDevelopmentPortsClosed": [4300, 4321],
+    "verificationBrowsersClosed": true,
+    "realPublications": 0
+  }
+}

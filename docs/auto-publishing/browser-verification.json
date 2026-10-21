@@ -1,0 +1,69 @@
+{
+  "url": "https://bn.sid.mom/accounts",
+  "checkedAt": "2026-10-21T21:53:59.045Z",
+  "accounts": [
+    {
+      "id": "acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0",
+      "name": "广场账号 54C65AD8",
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "nextDueAt": "2026-10-21T22:20:20.920Z",
+      "blockReason": null
+    },
+    {
+      "id": "acct_b1a08e6c-19b4-4f7c-b019-f6f508ce02a1",
+      "name": "广场账号 FA001600",
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "nextDueAt": "2026-10-21T22:20:39.922Z",
+      "blockReason": null
+    },
+    {
+      "id": "acct_10851332-9d22-4429-a341-64788ada2f6b",
+      "name": "广场账号 0CD9112F",
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "nextDueAt": "2026-10-21T22:29:32.923Z",
+      "blockReason": null
+    },
+    {
+      "id": "acct_5c3acb13-16d8-40f8-b265-5b29a78a6d3d",
+      "name": "广场账号 24AC680C",
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "nextDueAt": "2026-10-21T22:21:09.925Z",
+      "blockReason": null
+    },
+    {
+      "id": "acct_8b923503-569a-4065-a375-bcc43ba37e7f",
+      "name": "广场账号 DC03F2A6",
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "nextDueAt": "2026-10-21T22:28:57.927Z",
+      "blockReason": null
+    },
+    {
+      "id": "acct_0d4de6ea-7e6a-4e37-9e76-9dfe3df0ba7a",
+      "name": "广场账号 A13F724B",
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "nextDueAt": "2026-10-21T22:17:51.929Z",
+      "blockReason": null
+    },
+    {
+      "id": "acct_042f5d47-f905-405b-a4b3-69900a855300",
+      "name": "广场账号 96FE2F7F",
+      "presetCount": 8,
+      "scheduleEnabled": true,
+      "nextDueAt": "2026-10-21T22:20:13.935Z",
+      "blockReason": null
+    }
+  ],
+  "pageErrors": [],
+  "requestErrors": [],
+  "globallyPaused": false,
+  "publishTransportEnabled": true,
+  "workerState": "running",
+  "passed": true,
+  "browserClosed": true
+}

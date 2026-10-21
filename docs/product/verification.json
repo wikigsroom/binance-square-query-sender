@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-21T23:29:30.713159+00:00",
+  "scope": "Monorepo source and documentation consolidation; no new production publishing or paid model requests",
+  "platformRelease": "20261022-publish-first",
+  "typeChecks": {
+    "backend": "passed",
+    "dashboard": "passed"
+  },
+  "productionBuilds": {
+    "backend": "passed",
+    "dashboard": "passed"
+  },
+  "automatedTests": {
+    "backendPassed": 61,
+    "dashboardPassed": 13,
+    "legacyPassed": 9,
+    "totalPassed": 83,
+    "failed": 0
+  },
+  "presetRules": {
+    "parsed": 10,
+    "passed": true
+  },
+  "componentSourcePreservation": {
+    "backendPreviouslyTracked": 66,
+    "dashboardPreviouslyTracked": 56,
+    "missingFiles": []
+  },
+  "productionScreenshots": {
+    "count": 20,
+    "readOnly": true,
+    "nonAuthenticationWrites": 0,
+    "runtimeSwitchesUnchanged": true,
+    "pageErrors": [],
+    "browserClosed": true
+  },
+  "nativeBrowserTests": {
+    "publishingHardDisabled": true,
+    "ownedServicesStopped": true
+  },
+  "repositoryVerification": {
+    "passed": true,
+    "credentialFindings": 0,
+    "brokenLocalLinks": 0,
+    "nestedGitLinks": 0
+  },
+  "svgDiagrams": {
+    "count": 3,
+    "xmlParsed": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "binance-square-query-sender",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Square Desk: AI-authored multi-account Binance Square publishing platform",
+  "engines": { "node": ">=22.14" },
+  "scripts": {
+    "check:platform": "npm --prefix app/square-service run check && npm --prefix app/square-dashboard run check",
+    "build:platform": "npm --prefix app/square-service run build && npm --prefix app/square-dashboard run build",
+    "test": "npm --prefix app/square-service test && npm run test:legacy",
+    "test:legacy": "node --test tests/batch.test.mjs tests/skill-batch.test.mjs",
+    "test:dashboard": "node app/repository/test-dashboard.mjs",
+    "verify:repository": "node app/repository/verify-repository.mjs",
+    "capture:product": "node app/deployment/capture-product.mjs"
+  },
+  "dependencies": { "undici": "^6.21.3" }
+}

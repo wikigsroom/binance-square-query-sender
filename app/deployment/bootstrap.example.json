@@ -1,0 +1,6 @@
+{
+  "adminUsername": "owner",
+  "adminPassword": "REPLACE_WITH_UNIQUE_PASSWORD",
+  "databasePassword": "REPLACE_WITH_GENERATED_PASSWORD",
+  "encryptionKey": "REPLACE_WITH_32_BYTE_BASE64_KEY"
+}

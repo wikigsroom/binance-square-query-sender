@@ -1,0 +1,32 @@
+[Unit]
+Description=Square Desk API and account scheduler
+After=network-online.target postgresql@16-aidesign.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=square-platform
+Group=square-platform
+WorkingDirectory=/opt/square-platform/current/service
+EnvironmentFile=/etc/square-platform/square.env
+Environment=NODE_OPTIONS=--max-old-space-size=256
+Environment=MALLOC_ARENA_MAX=2
+Environment=UV_THREADPOOL_SIZE=2
+ExecStart=/usr/local/bin/node dist/src/main.js
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=90
+KillSignal=SIGTERM
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/square-platform/data
+MemoryHigh=384M
+MemoryMax=512M
+TasksMax=64
+LimitNOFILE=16384
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

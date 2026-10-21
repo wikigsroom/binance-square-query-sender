@@ -1,0 +1,15 @@
+{
+  "name": "binance-square-autoposter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scheduled Binance Square publisher with gpt-6-luna-only copy generation",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "once": "node src/index.mjs --once",
+    "check": "node --check src/config.mjs && node --check src/files.mjs && node --check src/commands.mjs && node --check src/news.mjs && node --check src/validation.mjs && node --check src/llm.mjs && node --check src/index.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

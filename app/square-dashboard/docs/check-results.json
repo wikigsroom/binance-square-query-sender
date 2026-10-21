@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-10-20T08:32:08.904014+00:00",
+  "classification": "development checks; not deployment or formal acceptance",
+  "commands": [
+    "npm run build",
+    "npm test",
+    "node scripts/capture.mjs"
+  ],
+  "testSummary": {
+    "passed": 4,
+    "failed": 0
+  },
+  "environment": "Running local UI and API with an explicitly isolated fixture profile, Chromium via Playwright",
+  "realModelCalls": false,
+  "realPublications": false,
+  "realCredentialImport": false
+}

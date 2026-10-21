@@ -1,0 +1,51 @@
+{
+  "release": "20261022-sources",
+  "checkedAt": "2026-10-21T19:40:28Z",
+  "login": "passed",
+  "sources": [
+    {
+      "sourceId": "source_binance",
+      "count": 515,
+      "url": "https://api.binance.com/api/v3/ticker/24hr",
+      "window": "rolling_24h",
+      "cached": true,
+      "checkedAt": "2026-10-21T19:40:26.691Z"
+    },
+    {
+      "sourceId": "source_jinse",
+      "count": 60,
+      "scannedCount": 60,
+      "transport": "public_api",
+      "cached": true,
+      "checkedAt": "2026-10-21T19:40:28.232Z",
+      "fallbackErrors": [],
+      "sampleEvidenceUrl": "https://api.jinse2.com/noah/v2/lives?limit=20&reading=false&source=web&flag=down&id=0&category=0",
+      "filteredCount": 12
+    },
+    {
+      "sourceId": "source_blockbeats",
+      "count": 60,
+      "scannedCount": 60,
+      "transport": "official_channel",
+      "cached": true,
+      "checkedAt": "2026-10-21T19:40:28.581Z",
+      "fallbackErrors": [
+        {
+          "url": "https://api.theblockbeats.news/v2/rss/newsflash",
+          "code": "NEWS_FEED_EMPTY",
+          "details": {},
+          "message": "律动官方 RSS 返回空内容；不视为采集成功。",
+          "retryable": false
+        }
+      ],
+      "sampleEvidenceUrl": "https://t.me/theblockbeats/201713",
+      "filteredCount": 15
+    }
+  ],
+  "database": "postgresql",
+  "globallyPaused": true,
+  "publishTransportEnabled": false,
+  "realModelCallsForVerification": 0,
+  "publicationsForVerification": 0,
+  "status": "passed"
+}

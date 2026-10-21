@@ -1,0 +1,455 @@
+{
+  "checkedAt": "2026-10-20T10:02:05.049Z",
+  "environment": "Native Chromium with isolated loopback API, no real AI or publication.",
+  "pageErrors": [],
+  "results": [
+    {
+      "width": 375,
+      "theme": "light",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "overview",
+      "overflow": false,
+      "heading": "账号独立计划",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "accounts",
+      "overflow": false,
+      "heading": "账号与计划",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "presets",
+      "overflow": false,
+      "heading": "内容预设",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "media",
+      "overflow": false,
+      "heading": "图库与生图",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "posts",
+      "overflow": false,
+      "heading": "帖子中心",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "jobs",
+      "overflow": false,
+      "heading": "任务与日志",
+      "contrast": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "route": "settings",
+      "overflow": false,
+      "heading": "系统设置",
+      "contrast": []
+    }
+  ]
+}

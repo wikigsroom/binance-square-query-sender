@@ -1,0 +1,32 @@
+{
+  "url": "https://bn.sid.mom/presets",
+  "checkedAt": "2026-10-21T21:18:46.065Z",
+  "pageErrors": [],
+  "requestErrors": [
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "error": "csp"
+    }
+  ],
+  "checks": {
+    "presetNames": [
+      "Meme 整活｜狗狗与青蛙",
+      "涨跌榜现场｜散户碎碎念",
+      "News 拆解｜消息到底改变了什么",
+      "精品长文｜把一件事讲透",
+      "比特币宏观｜资金为什么动",
+      "以太坊与 DeFi｜收益从哪里来",
+      "Solana 生态｜热闹有没有留下用户",
+      "AI 与 DePIN｜先看需求再听故事",
+      "GameFi 与应用｜先好玩再谈代币",
+      "逆向审视｜热闹里找漏洞"
+    ],
+    "tenPublishedPresetsWithGeneration": true,
+    "essayLengthRulesVisible": true,
+    "approvedImageModelAndPromptVisible": true,
+    "approvedTextModelVisible": true,
+    "mobileNoHorizontalOverflow": true
+  },
+  "passed": true,
+  "browserClosed": true
+}

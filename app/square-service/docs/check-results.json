@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-10-20T10:13:59.917684+00:00",
+  "classification": "development checks; not deployment or formal acceptance",
+  "commands": [
+    "npm run build",
+    "npm test",
+    "npm run check"
+  ],
+  "testSummary": {
+    "passed": 43,
+    "failed": 0
+  },
+  "environment": "PGlite, loopback source/model HTTP fixtures, Square adapter doubles and response fixtures",
+  "realModelCalls": false,
+  "realPublications": false,
+  "realCredentialImport": false,
+  "version": "0.2.0"
+}

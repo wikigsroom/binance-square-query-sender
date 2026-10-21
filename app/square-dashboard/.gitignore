@@ -1,0 +1,9 @@
+node_modules/
+.npm-cache/
+dist/
+.env*
+!.env.example
+*.log
+test-results/
+playwright-report/
+.browsers/

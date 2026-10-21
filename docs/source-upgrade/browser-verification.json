@@ -1,0 +1,29 @@
+{
+  "url": "https://bn.sid.mom/settings?section=sources",
+  "checkedAt": "2026-10-21T19:46:53.225Z",
+  "pageErrors": [],
+  "requestErrors": [
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "error": "csp"
+    }
+  ],
+  "checks": {
+    "login": true,
+    "sourceCards": 3,
+    "marketRows": 200,
+    "jinse": {
+      "visibleNews": 20,
+      "transport": "读取于 10/22 03:47:03\n金色公开快讯接口\n刚刚读取",
+      "ethFilteredCount": 5
+    },
+    "blockbeats": {
+      "visibleNews": 20,
+      "transport": "读取于 10/22 03:47:08\n律动官方公开频道\n刚刚读取",
+      "ethFilteredCount": 5
+    },
+    "mobileNoHorizontalOverflow": true
+  },
+  "passed": true,
+  "browserClosed": true
+}

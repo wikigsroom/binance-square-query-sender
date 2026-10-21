@@ -1,0 +1,205 @@
+{
+  "packId": "diverse-10-20261022",
+  "checkedAt": "2026-10-21T21:15:48.406054+00:00",
+  "packSha256": "f3e6ae1b6a415775a26edeaf6228a9474378bea73c8dae792e88600ef93e4be2",
+  "status": "passed",
+  "presets": [
+    {
+      "key": "meme-club",
+      "name": "Meme 整活｜狗狗与青蛙",
+      "rulesSha256": "1323658df4af5e0775c42c6cf3efc896d6acd6ceea2b243af3bdf86e9ac56409",
+      "created": true,
+      "id": "preset_1342492c-e791-4514-9b26-d3c2a0948f78",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_a8a69c13-1cee-4ebe-871c-2ae91ef3aec2",
+      "verified": true,
+      "preferredCharacters": [
+        100,
+        180
+      ],
+      "hardLimit": 220,
+      "imageMode": "generate",
+      "imageStyle": "原创 Meme 涂鸦贴纸",
+      "imageFallback": "block"
+    },
+    {
+      "key": "market-whiplash",
+      "name": "涨跌榜现场｜散户碎碎念",
+      "rulesSha256": "4a7db073f4be569005ae42336de138d3283f6882d30286ea1463b678d44a6d93",
+      "created": true,
+      "id": "preset_49cedcfd-92dd-40fa-b080-e36910d160f7",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_2141404a-8bb4-423f-9f4b-8f6ffafd1d64",
+      "verified": true,
+      "preferredCharacters": [
+        140,
+        230
+      ],
+      "hardLimit": 280,
+      "imageMode": "generate",
+      "imageStyle": "对比鲜明的3D微缩场景",
+      "imageFallback": "block"
+    },
+    {
+      "key": "news-desk",
+      "name": "News 拆解｜消息到底改变了什么",
+      "rulesSha256": "aa7d6125ee79bbfd81723ff0818c3a2a0657fff558f075127c2684509d674902",
+      "created": true,
+      "id": "preset_b88a9787-e0c0-4ea0-a22a-dae1e4b92b32",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_c0857cd2-90c9-4775-95e8-b2b9c23a06fa",
+      "verified": true,
+      "preferredCharacters": [
+        350,
+        650
+      ],
+      "hardLimit": 800,
+      "imageMode": "generate",
+      "imageStyle": "克制的新闻编辑拼贴",
+      "imageFallback": "block"
+    },
+    {
+      "key": "feature-essay",
+      "name": "精品长文｜把一件事讲透",
+      "rulesSha256": "6254d1748fa6fb2a3851163bdeef3e14b11097d1c750115d5626fb88aa7a18d9",
+      "created": true,
+      "id": "preset_abc074e6-8ba4-48b5-98c0-cf6ba38f59af",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_7f6d779f-4dc5-4f4c-9fac-f1bee8439958",
+      "verified": true,
+      "preferredCharacters": [
+        1200,
+        1800
+      ],
+      "hardLimit": 2000,
+      "imageMode": "generate",
+      "imageStyle": "杂志专题封面的手工拼贴",
+      "imageFallback": "block"
+    },
+    {
+      "key": "bitcoin-macro",
+      "name": "比特币宏观｜资金为什么动",
+      "rulesSha256": "97c52c9a44a58dcef090d2036d820426e4fdcbc7459c79f10d3cb1607bede8fb",
+      "created": true,
+      "id": "preset_86cf9cda-599f-4dac-9288-dd7635ae24c1",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_5acb8b13-3a17-4f8c-9a59-de27d253c959",
+      "verified": true,
+      "preferredCharacters": [
+        400,
+        700
+      ],
+      "hardLimit": 900,
+      "imageMode": "generate",
+      "imageStyle": "纪实静物质感的金融概念摄影",
+      "imageFallback": "block"
+    },
+    {
+      "key": "ethereum-defi",
+      "name": "以太坊与 DeFi｜收益从哪里来",
+      "rulesSha256": "8c8b114722e42fd79a3383f3f5d09bddc73f773f9624575984a42adc47749a37",
+      "created": true,
+      "id": "preset_4cbeef6c-e679-4158-9a86-75f9e237ecd1",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_4e0b5edd-0f7c-4eff-bdd8-7ef72851f746",
+      "verified": true,
+      "preferredCharacters": [
+        450,
+        750
+      ],
+      "hardLimit": 950,
+      "imageMode": "generate",
+      "imageStyle": "流动性管道与建筑剖面的技术插画",
+      "imageFallback": "block"
+    },
+    {
+      "key": "solana-ecosystem",
+      "name": "Solana 生态｜热闹有没有留下用户",
+      "rulesSha256": "ce8119bf456aba525b79914e23a25d1d0c17cfc7d92b998b7ccc41a5d7868866",
+      "created": true,
+      "id": "preset_1ca4e132-f468-42c3-8e70-bc2e72c8cc7a",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_fefb951c-f56e-4ecc-82c3-b4ed564710ec",
+      "verified": true,
+      "preferredCharacters": [
+        320,
+        550
+      ],
+      "hardLimit": 700,
+      "imageMode": "generate",
+      "imageStyle": "夜色城市与链上网络的赛博插画",
+      "imageFallback": "block"
+    },
+    {
+      "key": "ai-depin",
+      "name": "AI 与 DePIN｜先看需求再听故事",
+      "rulesSha256": "1a9bb621b81f844589962cd380234d4047bb9fef1d3fdde8b7f5c9f09ddaee51",
+      "created": true,
+      "id": "preset_b02bd30f-24ae-441e-a395-aa71704a25f0",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_b31b9ab5-e1aa-4be9-9a91-65ae2b9bb613",
+      "verified": true,
+      "preferredCharacters": [
+        450,
+        700
+      ],
+      "hardLimit": 900,
+      "imageMode": "generate",
+      "imageStyle": "精密机器与分布式算力的产品摄影感插画",
+      "imageFallback": "block"
+    },
+    {
+      "key": "gamefi-products",
+      "name": "GameFi 与应用｜先好玩再谈代币",
+      "rulesSha256": "e0c22ec4be4a8874f374e7de2ecac0e697e83c2cbcdff67acd0c8394cda59c27",
+      "created": true,
+      "id": "preset_3f45a874-f4c7-48ad-9508-998ebe2c10d5",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_b7a2f95d-0bd5-4dbe-a536-6bd60bf492cd",
+      "verified": true,
+      "preferredCharacters": [
+        350,
+        600
+      ],
+      "hardLimit": 750,
+      "imageMode": "generate",
+      "imageStyle": "原创游戏世界的叙事概念插画",
+      "imageFallback": "block"
+    },
+    {
+      "key": "risk-counterpoint",
+      "name": "逆向审视｜热闹里找漏洞",
+      "rulesSha256": "ad33b021f577d701744cbbb2d600725013c8093add86e2cc216f2766cb04e462",
+      "created": true,
+      "id": "preset_1940aaea-527b-439a-ac4d-e3b34834e402",
+      "publishedNumber": 1,
+      "publishedVersionId": "preset_version_7595761a-60d3-488f-8d3c-8b18459b3948",
+      "verified": true,
+      "preferredCharacters": [
+        320,
+        550
+      ],
+      "hardLimit": 700,
+      "imageMode": "generate",
+      "imageStyle": "悬疑感的建筑结构隐喻",
+      "imageFallback": "block"
+    }
+  ],
+  "realModelGenerationCalls": 0,
+  "realPublications": 0,
+  "models": {
+    "text": {
+      "id": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "externalId": "gpt-6-luna"
+    },
+    "image": {
+      "id": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "externalId": "gpt-image-2.5"
+    }
+  },
+  "accountCount": 7,
+  "globallyPausedBefore": true,
+  "accountsAndSchedulesUnchanged": true,
+  "globallyPausedAfter": true,
+  "runtimePauseUnchanged": true
+}

@@ -1,0 +1,10 @@
+{
+  "release": "20261022-cors-put",
+  "createdAt": "2026-10-21T21:38:46.621421+00:00",
+  "file": "20261022-cors-put.tar.gz",
+  "bytes": 186696,
+  "sha256": "a06c743ef8dad6fe7ca4c83a035ccce358a456f61c5507c09f2813892fb372d7",
+  "frontendOrigin": "https://bn.sid.mom",
+  "apiOrigin": "https://bn-api.sid.mom",
+  "apiPort": 39410
+}

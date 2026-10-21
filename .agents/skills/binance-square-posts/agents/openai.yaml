@@ -1,0 +1,4 @@
+interface:
+  display_name: "币安广场新闻与行情"
+  short_description: "核实律动消息与实时涨跌幅，写200字符内的自然口语观点帖并配图、批量发布核验"
+  default_prompt: "使用 $binance-square-posts，结合已核实的律动消息与三币实时涨跌幅，写出200字符以内、地道顺口且各有观点和鲜明态度的内容，并按本次明确的发布范围执行。"

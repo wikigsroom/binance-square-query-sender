@@ -1,0 +1,428 @@
+{
+  "checkedAt": "2026-10-21T21:50:07.670516+00:00",
+  "accounts": [
+    {
+      "id": "acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0",
+      "name": "广场账号 54C65AD8",
+      "status": "active",
+      "version": 1,
+      "updatedAt": "2026-10-21T20:59:31.254Z",
+      "createdAt": "2026-10-21T20:59:31.254Z",
+      "blockReason": null,
+      "cooldownUntil": null,
+      "lastPublishedAt": null,
+      "bindings": {
+        "bindingVersion": 2,
+        "bindings": [
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_1940aaea-527b-439a-ac4d-e3b34834e402",
+            "presetName": "逆向审视｜热闹里找漏洞",
+            "presetVersionId": "preset_version_7595761a-60d3-488f-8d3c-8b18459b3948",
+            "reason": null,
+            "probability": 0.125
+          },
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_3f45a874-f4c7-48ad-9508-998ebe2c10d5",
+            "presetName": "GameFi 与应用｜先好玩再谈代币",
+            "presetVersionId": "preset_version_b7a2f95d-0bd5-4dbe-a536-6bd60bf492cd",
+            "reason": null,
+            "probability": 0.125
+          },
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_b02bd30f-24ae-441e-a395-aa71704a25f0",
+            "presetName": "AI 与 DePIN｜先看需求再听故事",
+            "presetVersionId": "preset_version_b31b9ab5-e1aa-4be9-9a91-65ae2b9bb613",
+            "reason": null,
+            "probability": 0.125
+          },
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_1ca4e132-f468-42c3-8e70-bc2e72c8cc7a",
+            "presetName": "Solana 生态｜热闹有没有留下用户",
+            "presetVersionId": "preset_version_fefb951c-f56e-4ecc-82c3-b4ed564710ec",
+            "reason": null,
+            "probability": 0.125
+          },
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_4cbeef6c-e679-4158-9a86-75f9e237ecd1",
+            "presetName": "以太坊与 DeFi｜收益从哪里来",
+            "presetVersionId": "preset_version_4e0b5edd-0f7c-4eff-bdd8-7ef72851f746",
+            "reason": null,
+            "probability": 0.125
+          },
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_86cf9cda-599f-4dac-9288-dd7635ae24c1",
+            "presetName": "比特币宏观｜资金为什么动",
+            "presetVersionId": "preset_version_5acb8b13-3a17-4f8c-9a59-de27d253c959",
+            "reason": null,
+            "probability": 0.125
+          },
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_abc074e6-8ba4-48b5-98c0-cf6ba38f59af",
+            "presetName": "精品长文｜把一件事讲透",
+            "presetVersionId": "preset_version_7f6d779f-4dc5-4f4c-9fac-f1bee8439958",
+            "reason": null,
+            "probability": 0.125
+          },
+          {
+            "weight": 1,
+            "enabled": true,
+            "presetId": "preset_b88a9787-e0c0-4ea0-a22a-dae1e4b92b32",
+            "presetName": "News 拆解｜消息到底改变了什么",
+            "presetVersionId": "preset_version_c0857cd2-90c9-4775-95e8-b2b9c23a06fa",
+            "reason": null,
+            "probability": 0.125
+          }
+        ]
+      },
+      "schedule": {
+        "enabled": true,
+        "anchorAt": "2026-10-21T21:43:59.599Z",
+        "accountId": "acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0",
+        "nextDueAt": "2026-10-21T22:17:30.599Z",
+        "maxIntervalSeconds": 2400,
+        "minIntervalSeconds": 1200,
+        "sampledDelaySeconds": 2011,
+        "id": "acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0",
+        "version": 2,
+        "createdAt": "2026-10-21T20:59:31.254Z",
+        "updatedAt": "2026-10-21T21:43:59.601Z"
+      },
+      "recentJobs": []
+    },
+    {
+      "id": "acct_b1a08e6c-19b4-4f7c-b019-f6f508ce02a1",
+      "name": "广场账号 FA001600",
+      "status": "active",
+      "version": 1,
+      "updatedAt": "2026-10-21T20:59:31.250Z",
+      "createdAt": "2026-10-21T20:59:31.250Z",
+      "blockReason": null,
+      "cooldownUntil": null,
+      "lastPublishedAt": null,
+      "bindings": {
+        "bindingVersion": 1,
+        "bindings": []
+      },
+      "schedule": {
+        "enabled": false,
+        "anchorAt": null,
+        "accountId": "acct_b1a08e6c-19b4-4f7c-b019-f6f508ce02a1",
+        "nextDueAt": null,
+        "maxIntervalSeconds": 2400,
+        "minIntervalSeconds": 1200,
+        "sampledDelaySeconds": null,
+        "id": "acct_b1a08e6c-19b4-4f7c-b019-f6f508ce02a1",
+        "version": 1,
+        "createdAt": "2026-10-21T20:59:31.250Z",
+        "updatedAt": "2026-10-21T20:59:31.250Z"
+      },
+      "recentJobs": []
+    },
+    {
+      "id": "acct_10851332-9d22-4429-a341-64788ada2f6b",
+      "name": "广场账号 0CD9112F",
+      "status": "active",
+      "version": 1,
+      "updatedAt": "2026-10-21T20:59:31.247Z",
+      "createdAt": "2026-10-21T20:59:31.247Z",
+      "blockReason": null,
+      "cooldownUntil": null,
+      "lastPublishedAt": null,
+      "bindings": {
+        "bindingVersion": 1,
+        "bindings": []
+      },
+      "schedule": {
+        "enabled": false,
+        "anchorAt": null,
+        "accountId": "acct_10851332-9d22-4429-a341-64788ada2f6b",
+        "nextDueAt": null,
+        "maxIntervalSeconds": 2400,
+        "minIntervalSeconds": 1200,
+        "sampledDelaySeconds": null,
+        "id": "acct_10851332-9d22-4429-a341-64788ada2f6b",
+        "version": 1,
+        "createdAt": "2026-10-21T20:59:31.247Z",
+        "updatedAt": "2026-10-21T20:59:31.247Z"
+      },
+      "recentJobs": []
+    },
+    {
+      "id": "acct_5c3acb13-16d8-40f8-b265-5b29a78a6d3d",
+      "name": "广场账号 24AC680C",
+      "status": "active",
+      "version": 1,
+      "updatedAt": "2026-10-21T20:59:31.244Z",
+      "createdAt": "2026-10-21T20:59:31.244Z",
+      "blockReason": null,
+      "cooldownUntil": null,
+      "lastPublishedAt": null,
+      "bindings": {
+        "bindingVersion": 1,
+        "bindings": []
+      },
+      "schedule": {
+        "enabled": false,
+        "anchorAt": null,
+        "accountId": "acct_5c3acb13-16d8-40f8-b265-5b29a78a6d3d",
+        "nextDueAt": null,
+        "maxIntervalSeconds": 2400,
+        "minIntervalSeconds": 1200,
+        "sampledDelaySeconds": null,
+        "id": "acct_5c3acb13-16d8-40f8-b265-5b29a78a6d3d",
+        "version": 1,
+        "createdAt": "2026-10-21T20:59:31.244Z",
+        "updatedAt": "2026-10-21T20:59:31.244Z"
+      },
+      "recentJobs": []
+    },
+    {
+      "id": "acct_8b923503-569a-4065-a375-bcc43ba37e7f",
+      "name": "广场账号 DC03F2A6",
+      "status": "active",
+      "version": 1,
+      "updatedAt": "2026-10-21T20:59:31.240Z",
+      "createdAt": "2026-10-21T20:59:31.240Z",
+      "blockReason": null,
+      "cooldownUntil": null,
+      "lastPublishedAt": null,
+      "bindings": {
+        "bindingVersion": 1,
+        "bindings": []
+      },
+      "schedule": {
+        "enabled": false,
+        "anchorAt": null,
+        "accountId": "acct_8b923503-569a-4065-a375-bcc43ba37e7f",
+        "nextDueAt": null,
+        "maxIntervalSeconds": 2400,
+        "minIntervalSeconds": 1200,
+        "sampledDelaySeconds": null,
+        "id": "acct_8b923503-569a-4065-a375-bcc43ba37e7f",
+        "version": 1,
+        "createdAt": "2026-10-21T20:59:31.241Z",
+        "updatedAt": "2026-10-21T20:59:31.241Z"
+      },
+      "recentJobs": []
+    },
+    {
+      "id": "acct_0d4de6ea-7e6a-4e37-9e76-9dfe3df0ba7a",
+      "name": "广场账号 A13F724B",
+      "status": "active",
+      "version": 1,
+      "updatedAt": "2026-10-21T20:59:31.237Z",
+      "createdAt": "2026-10-21T20:59:31.237Z",
+      "blockReason": null,
+      "cooldownUntil": null,
+      "lastPublishedAt": null,
+      "bindings": {
+        "bindingVersion": 1,
+        "bindings": []
+      },
+      "schedule": {
+        "enabled": false,
+        "anchorAt": null,
+        "accountId": "acct_0d4de6ea-7e6a-4e37-9e76-9dfe3df0ba7a",
+        "nextDueAt": null,
+        "maxIntervalSeconds": 2400,
+        "minIntervalSeconds": 1200,
+        "sampledDelaySeconds": null,
+        "id": "acct_0d4de6ea-7e6a-4e37-9e76-9dfe3df0ba7a",
+        "version": 1,
+        "createdAt": "2026-10-21T20:59:31.238Z",
+        "updatedAt": "2026-10-21T20:59:31.238Z"
+      },
+      "recentJobs": []
+    },
+    {
+      "id": "acct_042f5d47-f905-405b-a4b3-69900a855300",
+      "name": "广场账号 96FE2F7F",
+      "status": "active",
+      "version": 1,
+      "updatedAt": "2026-10-21T20:59:31.231Z",
+      "createdAt": "2026-10-21T20:59:31.231Z",
+      "blockReason": null,
+      "cooldownUntil": null,
+      "lastPublishedAt": null,
+      "bindings": {
+        "bindingVersion": 1,
+        "bindings": []
+      },
+      "schedule": {
+        "enabled": false,
+        "anchorAt": null,
+        "accountId": "acct_042f5d47-f905-405b-a4b3-69900a855300",
+        "nextDueAt": null,
+        "maxIntervalSeconds": 2400,
+        "minIntervalSeconds": 1200,
+        "sampledDelaySeconds": null,
+        "id": "acct_042f5d47-f905-405b-a4b3-69900a855300",
+        "version": 1,
+        "createdAt": "2026-10-21T20:59:31.232Z",
+        "updatedAt": "2026-10-21T20:59:31.232Z"
+      },
+      "recentJobs": []
+    }
+  ],
+  "runtime": {
+    "paused": true,
+    "pauseEpoch": 1,
+    "concurrency": 10,
+    "stepRetries": 2,
+    "leaseSeconds": 120,
+    "textConcurrency": 2,
+    "imageConcurrency": 1,
+    "globalBannedWords": [
+      "情绪"
+    ],
+    "id": "main",
+    "version": 2,
+    "createdAt": "2026-10-21T18:39:57.618Z",
+    "updatedAt": "2026-10-21T20:01:09.795Z",
+    "publishTransportEnabled": false,
+    "profile": "normal"
+  },
+  "health": {
+    "api": "ok",
+    "database": "ok",
+    "databaseMode": "postgresql",
+    "worker": {
+      "at": "2026-10-21T21:50:07.696Z",
+      "role": "worker",
+      "owner": "worker_fa892954-8082-47dc-95e5-a1d5dad0fa51",
+      "state": "running",
+      "id": "worker_fa892954-8082-47dc-95e5-a1d5dad0fa51",
+      "version": 664,
+      "createdAt": "2026-10-21T21:39:03.938Z",
+      "updatedAt": "2026-10-21T21:50:07.697Z"
+    },
+    "publishTransportEnabled": false,
+    "storage": "ok"
+  },
+  "aiSettings": {
+    "defaultTextModelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+    "defaultImageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+    "id": "ai",
+    "version": 2,
+    "createdAt": "2026-10-21T18:39:57.624Z",
+    "updatedAt": "2026-10-21T18:59:31.307Z",
+    "text": {
+      "available": true,
+      "modelId": "model_afaaf7dc-db24-4e2e-836e-d69f241f6f16",
+      "name": "gpt-6-luna",
+      "externalId": "gpt-6-luna",
+      "connectionName": "local"
+    },
+    "image": {
+      "available": true,
+      "modelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+      "name": "gpt-image-2.5",
+      "externalId": "gpt-image-2.5",
+      "connectionName": "Local-image"
+    }
+  },
+  "presets": [
+    {
+      "id": "preset_1940aaea-527b-439a-ac4d-e3b34834e402",
+      "name": "逆向审视｜热闹里找漏洞",
+      "enabled": true,
+      "publishedVersionId": "preset_version_7595761a-60d3-488f-8d3c-8b18459b3948",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_3f45a874-f4c7-48ad-9508-998ebe2c10d5",
+      "name": "GameFi 与应用｜先好玩再谈代币",
+      "enabled": true,
+      "publishedVersionId": "preset_version_b7a2f95d-0bd5-4dbe-a536-6bd60bf492cd",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_b02bd30f-24ae-441e-a395-aa71704a25f0",
+      "name": "AI 与 DePIN｜先看需求再听故事",
+      "enabled": true,
+      "publishedVersionId": "preset_version_b31b9ab5-e1aa-4be9-9a91-65ae2b9bb613",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_1ca4e132-f468-42c3-8e70-bc2e72c8cc7a",
+      "name": "Solana 生态｜热闹有没有留下用户",
+      "enabled": true,
+      "publishedVersionId": "preset_version_fefb951c-f56e-4ecc-82c3-b4ed564710ec",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_4cbeef6c-e679-4158-9a86-75f9e237ecd1",
+      "name": "以太坊与 DeFi｜收益从哪里来",
+      "enabled": true,
+      "publishedVersionId": "preset_version_4e0b5edd-0f7c-4eff-bdd8-7ef72851f746",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_86cf9cda-599f-4dac-9288-dd7635ae24c1",
+      "name": "比特币宏观｜资金为什么动",
+      "enabled": true,
+      "publishedVersionId": "preset_version_5acb8b13-3a17-4f8c-9a59-de27d253c959",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_abc074e6-8ba4-48b5-98c0-cf6ba38f59af",
+      "name": "精品长文｜把一件事讲透",
+      "enabled": true,
+      "publishedVersionId": "preset_version_7f6d779f-4dc5-4f4c-9fac-f1bee8439958",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_b88a9787-e0c0-4ea0-a22a-dae1e4b92b32",
+      "name": "News 拆解｜消息到底改变了什么",
+      "enabled": true,
+      "publishedVersionId": "preset_version_c0857cd2-90c9-4775-95e8-b2b9c23a06fa",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_49cedcfd-92dd-40fa-b080-e36910d160f7",
+      "name": "涨跌榜现场｜散户碎碎念",
+      "enabled": true,
+      "publishedVersionId": "preset_version_2141404a-8bb4-423f-9f4b-8f6ffafd1d64",
+      "publishedNumber": 1
+    },
+    {
+      "id": "preset_1342492c-e791-4514-9b26-d3c2a0948f78",
+      "name": "Meme 整活｜狗狗与青蛙",
+      "enabled": true,
+      "publishedVersionId": "preset_version_a8a69c13-1cee-4ebe-871c-2ae91ef3aec2",
+      "publishedNumber": 1
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_fdd7ec3e-480c-4d35-9cda-b32e4baa09ec",
+      "name": "Local-image",
+      "enabled": true,
+      "concurrency": 10,
+      "timeoutMs": 120000,
+      "protocol": "openai_responses_images"
+    },
+    {
+      "id": "conn_a50d8f89-5725-4b4a-a015-da7cb59ad70e",
+      "name": "local",
+      "enabled": true,
+      "concurrency": 5,
+      "timeoutMs": 120000,
+      "protocol": "openai_chat_images"
+    }
+  ]
+}

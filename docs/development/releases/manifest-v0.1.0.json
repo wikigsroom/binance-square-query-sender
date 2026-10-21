@@ -1,0 +1,55 @@
+{
+  "version": "0.1.0",
+  "createdAt": "2026-10-20T08:33:07.788483+00:00",
+  "scope": "Development delivery; excludes remote deployment and formal acceptance",
+  "checks": {
+    "backendPassed": 35,
+    "backendFailed": 0,
+    "browserFlowsPassed": 4,
+    "browserFlowsFailed": 0,
+    "backendBuild": "passed",
+    "dashboardBuild": "passed",
+    "realPublications": 0,
+    "realModelCalls": 0
+  },
+  "repositories": [
+    {
+      "name": "square-service",
+      "path": "app/square-service",
+      "branch": "main",
+      "commit": "c245c4578a65f86250ae2d7866d604d9b402ad56",
+      "tag": "v0.1.0",
+      "cleanWorkingTree": true,
+      "trackedFiles": 50,
+      "bundle": "square-service-v0.1.0.bundle",
+      "bytes": 1619282,
+      "sha256": "81bf73e7f24a365ee36c30bbaff69f460860e0f921911a3fcbc511667afac857",
+      "readmes": [
+        "README.md",
+        "README.en.md"
+      ],
+      "screenshots": 10,
+      "logicDiagrams": 2,
+      "gitRemoteConfigured": false
+    },
+    {
+      "name": "square-dashboard",
+      "path": "app/square-dashboard",
+      "branch": "main",
+      "commit": "90762c61d36310a0174e4e053a37129de60133d8",
+      "tag": "v0.1.0",
+      "cleanWorkingTree": true,
+      "trackedFiles": 37,
+      "bundle": "square-dashboard-v0.1.0.bundle",
+      "bytes": 1592066,
+      "sha256": "08a06fd0315aad660b96b7bd348aa300e5650be49e57b18401144c08dc0c7cd2",
+      "readmes": [
+        "README.md",
+        "README.en.md"
+      ],
+      "screenshots": 10,
+      "logicDiagrams": 2,
+      "gitRemoteConfigured": false
+    }
+  ]
+}

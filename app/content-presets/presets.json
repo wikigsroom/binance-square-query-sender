@@ -1,0 +1,885 @@
+{
+  "packId": "diverse-10-20261022",
+  "version": 1,
+  "textModelExternalId": "gpt-6-luna",
+  "imageModelExternalId": "gpt-image-2.5",
+  "imagePolicy": "Every publication generates one new image with the approved model; no library fallback.",
+  "presets": [
+    {
+      "key": "meme-club",
+      "name": "Meme 整活｜狗狗与青蛙",
+      "description": "DOGE、SHIB、PEPE 的短篇整活，用现场行情接住梗；配原创涂鸦贴纸图。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "围绕这三种 Meme 币的滚动24小时涨跌，抓一个反差写成有趣短帖。可以把价格拟人化、拿追热点的冲动开玩笑，但夸张仅限比喻，不捏造持仓、亏赚、主力动作或项目新闻。三币标签与各自带正负号的涨跌幅必须准确。不要每次都写成三个币逐个点名的顺口溜，不堆网络黑话、感叹号和连续反问。",
+        "language": "zh-CN",
+        "perspective": "爱刷 Meme、看热闹也会犯嘀咕的普通散户",
+        "tone": "俏皮、嘴欠但不攻击个人，偶尔自嘲；梗要让中文读者直接听懂",
+        "preferredMin": 100,
+        "preferredMax": 180,
+        "maxChars": 220,
+        "paragraphs": "1—3个短段，句子可以长短交替；不要几个字就强制换行，也不固定押韵或结尾口号",
+        "tagCount": 3,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "DOGE",
+          "SHIB",
+          "PEPE"
+        ],
+        "tokenCount": 3,
+        "bothSides": false,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "笑点来自本轮真实涨跌反差、市场叙事和人的反应。未经证实的庄家行为只能当疑问。没有直接相关新闻时只写看盘感受，不强凑利好。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "Meme 整活｜狗狗与青蛙",
+          "tags": [
+            "meme",
+            "涂鸦"
+          ],
+          "style": "原创 Meme 涂鸦贴纸",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "画一张原创加密文化贴纸插画：一只机灵的绿色小青蛙和两只表情不同的小狗，围绕忽高忽低的纸板舞台发生有趣的视觉冲突。荧光绿、橘黄、黑色粗线，手绘不规则边缘，清楚的角色动作和一个明确笑点。每次自由变化动作、视点、道具与留白；不要直接复刻现成 Meme 图或真实人物，不要满屏文字、币价、K线与收益截图。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "market-whiplash",
+      "name": "涨跌榜现场｜散户碎碎念",
+      "description": "从涨跌前五各取样，共三币，短评盘面反差；配有冲突感的3D小场景。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "从币安现货涨幅前五和跌幅前五合计选择三币，两榜都要有。逐币交代滚动24小时涨跌幅，把观察落在一个盘面反差上，例如强弱分化、热度轮换或涨得快也退得快。不要把随机三币编造成同一板块，不把涨跌当基本面结论。观点与开头每篇换角度，不复制上次的句式。",
+        "language": "zh-CN",
+        "perspective": "盯着涨跌榜、对追涨杀跌保持怀疑的散户",
+        "tone": "直接、口语、有脾气，允许兴奋或不服气，但不无证据骂人操盘",
+        "preferredMin": 140,
+        "preferredMax": 230,
+        "maxChars": 280,
+        "paragraphs": "2—4个自然短段，允许从一个数字、一个反差或一句直接判断进入，不固定三段式",
+        "tagCount": 3,
+        "requiredTags": [],
+        "selection": "market_top5",
+        "tokens": [],
+        "tokenCount": 3,
+        "bothSides": true,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "榜单是现货滚动24小时、有成交的USDT交易对，不是自然日、合约榜或未来预测。可以用已经读取且直接相关的新闻补充其中一币，不能给另外两币套同一原因。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "涨跌榜现场｜散户碎碎念",
+          "tags": [
+            "行情",
+            "3D场景"
+          ],
+          "style": "对比鲜明的3D微缩场景",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "做一张3D微缩编辑插画：同一小舞台上，三枚没有文字的代币圆片处于不同状态，一枚被弹簧托起、一枚滑落、一枚停在分岔边缘。用青绿色与珊瑚红表现反差，哑光陶土、真实柔和阴影，斜俯视构图。每次改变舞台结构、重心和镜头角度；不要真实价格、交易平台界面或假K线，不出现稳赚暗示。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "news-desk",
+      "name": "News 拆解｜消息到底改变了什么",
+      "description": "BTC、ETH 相关新闻先核事实再谈影响，区分消息、机制和推测；配新闻编辑插画。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "从已核实的近72小时律动快讯里挑一条与BTC或ETH直接有关的事件，可用金色快讯交叉补充。用自己的话说清报道了什么、事件进行到哪一步、哪个机制可能受影响，以及仍缺哪项证据。主角是这一件事，另一币只作有依据的比较或背景，不能硬说同时受益。标注来源与北京时间日期；推测明确写成条件判断。行情只在支持主线时加入，不必机械列出两币涨跌。",
+        "language": "zh-CN",
+        "perspective": "愿意读原文、对标题党没耐心的个人投资者",
+        "tone": "有判断、讲人话、对关键细节追问，不写播报腔和翻译腔",
+        "preferredMin": 350,
+        "preferredMax": 650,
+        "maxChars": 800,
+        "paragraphs": "3—5个自然段，可有一个简短标题；事实、分析与疑问自然衔接，不固定小标题或问答格式",
+        "tagCount": 2,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "BTC",
+          "ETH"
+        ],
+        "tokenCount": 2,
+        "bothSides": false,
+        "requiredPercent": false,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": true,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "至少使用一条实际读取的相关新闻，不能用新闻标题替代正文。提案、申请、测试、获批和正式上线必须区分。资金、流量或监管数字写清单位和统计范围；没有给定数字就不用。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "News 拆解｜消息到底改变了什么",
+          "tags": [
+            "新闻分析",
+            "编辑插画"
+          ],
+          "style": "克制的新闻编辑拼贴",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "设计一张新闻分析栏目配图：以半透明纸页、透镜和两种抽象区块链几何标记，表现从报道表层看到机制与待验证部分。冷白、墨蓝、朱红少量点色，纸张纤维和精细阴影，视觉中心明确、有留白。画面是原创概念插画，不是新闻现场或新闻网站截图；不生成假头条、媒体标识、数字图表或真实人物照片。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "feature-essay",
+      "name": "精品长文｜把一件事讲透",
+      "description": "从BTC、ETH 的真实事件切入，写机制、受益者与反例，不用字数堆深度；配杂志封面级插画。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 8192
+        },
+        "direction": "围绕一条已核实的BTC或ETH相关新闻提出一个值得讲透的问题。把事件中的机制、参与者利益、可能受益的一方、成本承担者与反例串成连贯文章；给出支持自己观点的事实，也认真处理一条反对意见。结尾留下可验证的后续观察点。BTC与ETH可以作真实比较，但不要把一币新闻套到另一币。不要写百科大拼盘、万能行业展望或固定的总分总；标题、篇章结构与切入点逐篇独立组织。",
+        "language": "zh-CN",
+        "perspective": "愿意做功课、把复杂问题说明白的独立观察者",
+        "tone": "扎实、流畅、有个人判断；锋芒落在论证上，不靠术语吓人",
+        "preferredMin": 1200,
+        "preferredMax": 1800,
+        "maxChars": 2000,
+        "paragraphs": "6—10个自然段，必要时用1—3个有信息量的小标题；不强制小标题数量，不堆一长串清单",
+        "tagCount": 2,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "BTC",
+          "ETH"
+        ],
+        "tokenCount": 2,
+        "bothSides": false,
+        "requiredPercent": false,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": true,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "事实锚点来自近72小时已读取新闻。一般机制解释应克制，新闻未给出的用户数、营收、TVL、机构持仓、产品细节与历史数据不得编造。篇幅用于论证，不用于重复风险提示；至少有一个事实、一个解释和一个可能推翻观点的条件。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "精品长文｜把一件事讲透",
+          "tags": [
+            "精品长文",
+            "封面"
+          ],
+          "style": "杂志专题封面的手工拼贴",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "制作一幅高完成度金融科技杂志专题插画：用石墨剖面结构、半透明玻璃层和手工纸张拼贴，表现区块链叙事表面下的成本、利益和基础设施。选一个清晰的主视觉隐喻，不堆金币和光效。米白、深蓝、旧铜色，细腻材质、精确光影、大面积有呼吸的留白。不要封面文字、虚构数据、真实品牌背书或仿制知名杂志版式。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "bitcoin-macro",
+      "name": "比特币宏观｜资金为什么动",
+      "description": "只跟踪BTC，把已报道的ETF、政策与资金线索同现货表现分开看；配纪实静物风概念图。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "围绕BTC现货滚动24小时行情，结合已读取的ETF、机构、政策或资金报道提出一个具体观察。把当期报道与历史背景、存量与净流量、美元金额与币数量区分开。不能因为BTC涨跌就断言资金流原因，不把某机构买入写成整个市场买入。若没有直接新闻，改写行情观察和自己会核对什么，不冒充当天宏观复盘。",
+        "language": "zh-CN",
+        "perspective": "关注资金来源与统计口径、但不装宏观专家的散户",
+        "tone": "稳、有自己的疑问，允许对宏大叙事不买账，少用抽象金融黑话",
+        "preferredMin": 400,
+        "preferredMax": 700,
+        "maxChars": 900,
+        "paragraphs": "3—6个段落，数字只在有用时出现；从资金口径、价格反差或新闻细节任取一条主线",
+        "tagCount": 1,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "BTC"
+        ],
+        "tokenCount": 1,
+        "bothSides": false,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "只把已给定材料中的ETF净流入、净流出、持仓及政策进展当事实；没有原始数据不画供需结论，不用给定源以外的实时利率、美元指数或美债收益率。必须准确带出BTC的滚动24小时涨跌幅。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "比特币宏观｜资金为什么动",
+          "tags": [
+            "BTC",
+            "宏观"
+          ],
+          "style": "纪实静物质感的金融概念摄影",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "创作一幅金融概念静物摄影：一枚无文字的铜色圆片、透明水槽中的细流和不同开度的阀门，表达资金进出与价格反应之间的复杂关系。自然侧光、深灰背景、玻璃折射和铜材质可信，构图像认真拍摄的静物，不是交易宣传海报。改变拍摄角度和道具比例，不出现钞票数字、ETF品牌、人物、真实账单或收益承诺。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "ethereum-defi",
+      "name": "以太坊与 DeFi｜收益从哪里来",
+      "description": "ETH、AAVE、UNI 的机制、费用与风险观察，拆清价值和补贴；配流动性结构插画。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "从ETH、AAVE、UNI 的本轮现货表现出发，围绕一个DeFi问题展开，例如收益来源、费用归属、借贷风险或流动性激励。已读取消息可作为具体锚点，机制解释与本次项目事实分开。不要把币价、协议收入、代币分红或持有者权益自动画等号，不把一般机制写成某协议最新功能。三币涨跌幅准确，但篇幅围绕一个主问题。",
+        "language": "zh-CN",
+        "perspective": "关心协议真正解决什么问题、谁付钱的普通使用者",
+        "tone": "好奇、较真、有一点不客气，把复杂机制换成清楚的中文",
+        "preferredMin": 450,
+        "preferredMax": 750,
+        "maxChars": 950,
+        "paragraphs": "4—7个自然段，必要时用一个生活类比；类比讲完回到实际限制，不固定问答或教程步骤",
+        "tagCount": 3,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "ETH",
+          "AAVE",
+          "UNI"
+        ],
+        "tokenCount": 3,
+        "bothSides": false,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "区分手续费收入和代币激励，存量和流量，治理提案和已执行。没有可靠资料不得写当前TVL、APY、清算阈值、安全审计结果或协议已经采用某项机制。没有相关新闻时写基于行情的提问与一般风险框架，不编操作体验。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "以太坊与 DeFi｜收益从哪里来",
+          "tags": [
+            "DeFi",
+            "机制"
+          ],
+          "style": "流动性管道与建筑剖面的技术插画",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "画一幅精细的等距建筑剖面：透明管道、储水池、交换节点与安全阀构成一个可理解的流动性装置，中心只有一个清楚的流动关系。青蓝、银灰和少量琥珀色，哑光金属与透明材质，兼具工程感与编辑插画的美感。不要文字标签、APY数字、币价曲线、项目Logo或声称安全认证。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "solana-ecosystem",
+      "name": "Solana 生态｜热闹有没有留下用户",
+      "description": "SOL、JUP、RAY 的生态与产品观察，看热度也问持续性；配高速度感的霓虹城市图。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "结合SOL、JUP、RAY 的滚动24小时涨跌，围绕Solana生态的一项已核实进展或一个用户问题写观察。可以讨论交易入口、聚合、流动性和真实使用的区别，但不能捏造自己交互、空投、交易或体验。不要把交易量、地址数直接称为独立用户，不把某协议消息说成全生态同步落地。三币数字准确，结论留出反面可能。",
+        "language": "zh-CN",
+        "perspective": "对链上应用好奇、但不把热闹当留存的用户",
+        "tone": "节奏快、有现场感，允许兴奋，也会追问实际用途",
+        "preferredMin": 320,
+        "preferredMax": 550,
+        "maxChars": 700,
+        "paragraphs": "3—5个段落，节奏明快，避免每段同样长度和每次都以生态繁荣收尾",
+        "tagCount": 3,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "SOL",
+          "JUP",
+          "RAY"
+        ],
+        "tokenCount": 3,
+        "bothSides": false,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "优先使用与SOL、JUP、RAY直接相关的快讯。活动量、机器人行为、激励与留存要分开；没有统计材料就不说用户增长、网络故障、性能或收入创新高。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "Solana 生态｜热闹有没有留下用户",
+          "tags": [
+            "Solana",
+            "生态"
+          ],
+          "style": "夜色城市与链上网络的赛博插画",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "一幅动感但清晰的夜色城市概念插画：紫色与青绿光路连接三个功能不同的建筑节点，前景是一条仍有人流经过的小街，画面把网络热闹与真实使用形成视觉对照。原创城市、电影感侧视透视、细腻的实体材质，不做纯发光线条壁纸。不要Logo、可读的交易量、K线、虚构产品界面或真实用户照片。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "ai-depin",
+      "name": "AI 与 DePIN｜先看需求再听故事",
+      "description": "TAO、RENDER、FET 的算力与AI叙事观察，区分产品需求与代币上涨；配精密机器场景。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "从TAO、RENDER、FET 的本轮涨跌中选一个值得讨论的问题，把AI产品需求、算力供需、网络激励和代币价值分别说清。可引用已核实快讯，但不要把公司AI业务增长自动推到这几个代币。提出谁在付费、什么需求已经验证、什么仍需观察的判断。避免列举项目百科与三个币各一段的机械结构。",
+        "language": "zh-CN",
+        "perspective": "对AI有兴趣、对只贴标签的项目会多问一句的散户",
+        "tone": "有技术好奇心、清醒、敢质疑，不用玄乎的未来叙事",
+        "preferredMin": 450,
+        "preferredMax": 700,
+        "maxChars": 900,
+        "paragraphs": "4—6个自然段，从一个产品问题或叙事反差切入，最多一个简短小标题",
+        "tagCount": 3,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "TAO",
+          "RENDER",
+          "FET"
+        ],
+        "tokenCount": 3,
+        "bothSides": false,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "只有材料明确给出时才写算力利用率、客户、收入、合作方、模型能力或正式产品进度。一般性原理可以解释，但不能假称某项目已有特定客户、硬件规模或技术突破。三币带符号涨跌幅与滚动24小时口径必须准确。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "AI 与 DePIN｜先看需求再听故事",
+          "tags": [
+            "AI",
+            "DePIN"
+          ],
+          "style": "精密机器与分布式算力的产品摄影感插画",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "制作一张有实体质感的AI基础设施概念图：数个不同尺寸的计算模块通过细密光纤连接到一个真正输出作品的小型工作台，突出输入、协作和实际产出，而非漂浮的大脑。石墨灰、冷白与少量电光蓝，精密机械细节、微距摄影式光线、干净背景。不要真实厂商品牌、合作标识、性能数字或机器人交易员。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "gamefi-products",
+      "name": "GameFi 与应用｜先好玩再谈代币",
+      "description": "IMX、GALA、AXS 的产品与消费逻辑，讨论用户为什么回来；配有故事感的原创游戏场景。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "围绕IMX、GALA、AXS 的现货涨跌和可核实的应用消息，挑一个消费或游戏问题写：好玩与赚钱的区别、激励退去后用户为什么回来、资产流通给谁带来便利。未经体验不得声称试玩、上手、付费或回本。项目发布、测试、上线、活跃和商业成功不能混用。三币数字准确，讨论以产品为主，不是买币教程。",
+        "language": "zh-CN",
+        "perspective": "在意产品是否有意思、也会看代币表现的普通玩家视角",
+        "tone": "轻松、具体，能吐槽但不装亲自玩过，不把技术宣传照搬成评价",
+        "preferredMin": 350,
+        "preferredMax": 600,
+        "maxChars": 750,
+        "paragraphs": "3—6个自然段，可从一个玩家会问的问题进入，避免固定的优点缺点清单",
+        "tagCount": 3,
+        "requiredTags": [],
+        "selection": "fixed",
+        "tokens": [
+          "IMX",
+          "GALA",
+          "AXS"
+        ],
+        "tokenCount": 3,
+        "bothSides": false,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "新闻可选。没有直接报道时用本轮行情提出具体的产品评价问题，不能补造DAU、下载量、收入、版本更新、联名或游戏内经济。标题和内容都不要暗示已亲测。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "GameFi 与应用｜先好玩再谈代币",
+          "tags": [
+            "GameFi",
+            "应用"
+          ],
+          "style": "原创游戏世界的叙事概念插画",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "画一幅原创游戏世界的小型叙事场景：一群风格各异的小角色围着真正有趣的桌面机关探索协作，旁边安静放着几枚没有数字的游戏代币，主角是玩法和人与人的互动。温暖自然光、丰富但克制的色彩、手绘与3D质感结合，场景清楚。不要复刻现有游戏角色、NFT头像或项目Logo，不画收益界面和赚币广告。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    },
+    {
+      "key": "risk-counterpoint",
+      "name": "逆向审视｜热闹里找漏洞",
+      "description": "从三币涨跌榜反向提问，拆薄流动性、叙事与证据缺口；配悬疑感的结构隐喻图。",
+      "rules": {
+        "modelId": "@default",
+        "parameters": {
+          "max_tokens": 4096
+        },
+        "direction": "从现货涨跌两榜前五合计选三币，把本轮真实价格反差变成一次反向审视。挑一个最值得核实的风险问题展开，分清已经看见的数据、自己担心的可能、还缺的证据。允许承认担心也可能判断错，并说清什么新事实会改变看法。不能因大涨断言拉盘出货，因大跌断言诈骗归零，或把成交额当盘口深度。",
+        "language": "zh-CN",
+        "perspective": "怕错过机会、也怕被漂亮故事带跑的普通散户",
+        "tone": "坦诚、有戒心、可以尖锐；质疑要具体，不唱空一切",
+        "preferredMin": 320,
+        "preferredMax": 550,
+        "maxChars": 700,
+        "paragraphs": "3—6个自然段，先事实还是先观点都可；不要每篇末尾统一劝人观望，也不机械反问三连",
+        "tagCount": 3,
+        "requiredTags": [],
+        "selection": "market_top5",
+        "tokens": [],
+        "tokenCount": 3,
+        "bothSides": true,
+        "requiredPercent": true,
+        "sourceRules": [
+          {
+            "sourceId": "source_binance",
+            "required": true,
+            "priority": 1,
+            "maxAgeSeconds": 900
+          },
+          {
+            "sourceId": "source_blockbeats",
+            "required": false,
+            "priority": 2,
+            "maxAgeSeconds": 259200
+          },
+          {
+            "sourceId": "source_jinse",
+            "required": false,
+            "priority": 3,
+            "maxAgeSeconds": 259200
+          }
+        ],
+        "factsMaxAgeSeconds": 900,
+        "material": "新闻只用直接关联的已读取材料。没有订单簿、解锁表、持仓集中度或资金链证据，不声称这些数据恶化；可以明确说要进一步核对。价格变化本身不足以证明内幕、操盘或项目破产。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
+        "image": {
+          "mode": "generate",
+          "collection": "逆向审视｜热闹里找漏洞",
+          "tags": [
+            "风险观察",
+            "逆向"
+          ],
+          "style": "悬疑感的建筑结构隐喻",
+          "aspectRatio": "1:1",
+          "reuseSeconds": 86400,
+          "modelId": "@default",
+          "prompt": "一幅有张力的概念插画：灯光明亮的精巧舞台下，一束手电照出不同受力的支架和仍未查明的阴影，画面表达检查结构而非宣判崩塌。深靛蓝、琥珀黄和少量暖白，真实材质、侧面剖视构图、视觉重心明确。不要骷髅、诈骗标签、项目Logo、真实人物指控、价格图或夸张灾难海报。\n单幅正方形社交媒体配图；只生成图片，不加标题、价格、新闻引语、签名或水印。画面是艺术概念表达，不能伪装新闻现场、交易回执或机构背书。",
+          "parameters": {
+            "size": "1024x1024",
+            "quality": "medium"
+          },
+          "fallback": "block"
+        },
+        "bannedWords": [
+          "情绪",
+          "情感",
+          "心态",
+          "翻译腔"
+        ],
+        "qualityHints": [
+          "用地道、顺口的中文表达，不以“本文”“在当前背景下”“值得注意的是”等套话开场。",
+          "可以有鲜明态度，但观点必须落在具体材料或清楚标明的一般性问题上。",
+          "新闻和价格同向变化不等于已证实因果；不能把一币事件套给其他币。",
+          "与最近40篇比较切入点、结论、开头结尾和组织方式；不只替换币名与数字。",
+          "无需每天强行制造正面或负面结论；素材不足时收窄论点，不凑事实。",
+          "遵守本预设的体裁与篇幅，所有标签、标点、空白和换行计入硬上限。",
+          "百分数仅用于所选代币的本轮现货滚动24小时涨跌；其他新闻统计优先用可核实的金额、数量或文字表述，避免混淆口径。"
+        ],
+        "dedupWindow": 40,
+        "similarityThreshold": 0.76,
+        "repairAttempts": 2,
+        "semanticReview": true
+      }
+    }
+  ]
+}

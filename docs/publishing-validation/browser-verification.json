@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-21T22:39:10.205Z",
+  "jobId": "job_376da861-1635-452f-ac2a-074eea5addae",
+  "pageErrors": [],
+  "requestErrors": [],
+  "validationId": "validation_run_3ece70e4-5345-4193-aee7-b1dc075cfcdd",
+  "validationRounds": 3,
+  "errorCodes": [
+    "TOKEN_TAGS"
+  ],
+  "contentValidationMode": "publish_first",
+  "globallyPaused": false,
+  "publishTransportEnabled": true,
+  "passed": true,
+  "browserClosed": true
+}

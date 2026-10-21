@@ -1,0 +1,12 @@
+node_modules/
+.npm-cache/
+dist/
+.env
+.env.*
+!.env.example
+data/
+coverage/
+*.log
+*.zip
+playwright-report/
+test-results/

@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-21T21:31:38.960733+00:00",
+  "method": "OPTIONS",
+  "requestedMethod": "PUT",
+  "path": "/api/v1/accounts/acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0/preset-bindings",
+  "status": 403,
+  "headers": {
+    "access-control-allow-origin": "https://bn.sid.mom",
+    "access-control-allow-credentials": "true"
+  },
+  "body": {
+    "error": {
+      "code": "ORIGIN_REJECTED",
+      "message": "跨域请求来源或请求头不匹配。",
+      "details": {},
+      "retryable": false
+    },
+    "meta": {
+      "requestId": "req_8afc2ea5-34a4-4802-9c4c-283e4044e41b"
+    }
+  }
+}

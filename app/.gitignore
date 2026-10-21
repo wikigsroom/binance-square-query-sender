@@ -1,0 +1,4 @@
+.run.lock
+state/*.json
+state/*.log
+.env.local

@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-21T22:42:46.977296+00:00",
+  "release": "20261022-publish-first",
+  "contentValidationMode": "publish_first",
+  "globallyPaused": false,
+  "publishTransportEnabled": true,
+  "worker": "running",
+  "accountCount": 7,
+  "publishedAccountCount": 7,
+  "publishedPostCount": 7,
+  "publicVerificationCounts": {
+    "unavailable": 5,
+    "verified": 2
+  },
+  "recoveredFailedTaskCount": 4,
+  "supersededFailedTaskCount": 1,
+  "backendTestsPassed": 61,
+  "frontendBuildPassed": true,
+  "browserVerificationPassed": true,
+  "browserClosed": true,
+  "accounts": [
+    {
+      "accountName": "广场账号 54C65AD8",
+      "accountId": "acct_530ac324-094d-43fa-ae62-8eaa8d53b7f0",
+      "lastPublishedAt": "2026-10-21T22:41:35.307Z",
+      "nextDueAt": "2026-10-21T23:17:43.307Z",
+      "jobId": "job_4e9f3e77-8060-4f08-944f-0326c865276d",
+      "postId": "379827385302038",
+      "url": "https://app.binance.com/uni-qr/cpos/379827385302038?r=VNUKVAYK&l=zh-CN",
+      "verificationStatus": "unavailable",
+      "validationMode": "publish_first",
+      "warningCodes": [
+        "PREFERRED_LENGTH"
+      ]
+    },
+    {
+      "accountName": "广场账号 FA001600",
+      "accountId": "acct_b1a08e6c-19b4-4f7c-b019-f6f508ce02a1",
+      "lastPublishedAt": "2026-10-21T22:21:33.101Z",
+      "nextDueAt": "2026-10-21T22:55:10.101Z",
+      "jobId": "job_0a317522-e245-4942-b9c3-c8123a434bbf",
+      "postId": "379822461177901",
+      "url": "https://app.binance.com/uni-qr/cpos/379822461177901?r=NT7XOQRB&l=zh-CN",
+      "verificationStatus": "unavailable",
+      "validationMode": "strict",
+      "warningCodes": [
+        "PREFERRED_LENGTH"
+      ]
+    },
+    {
+      "accountName": "广场账号 0CD9112F",
+      "accountId": "acct_10851332-9d22-4429-a341-64788ada2f6b",
+      "lastPublishedAt": "2026-10-21T22:38:44.152Z",
+      "nextDueAt": "2026-10-21T23:00:24.152Z",
+      "jobId": "job_c0e3639e-56de-4d07-9711-d1a220ff145b",
+      "postId": "379826684305226",
+      "url": "https://app.binance.com/uni-qr/cpos/379826684305226?r=QZ51879T&l=zh-CN",
+      "verificationStatus": "unavailable",
+      "validationMode": "publish_first",
+      "warningCodes": []
+    },
+    {
+      "accountName": "广场账号 24AC680C",
+      "accountId": "acct_5c3acb13-16d8-40f8-b265-5b29a78a6d3d",
+      "lastPublishedAt": "2026-10-21T22:22:02.494Z",
+      "nextDueAt": "2026-10-21T22:43:18.494Z",
+      "jobId": "job_fcae13fe-6b3b-4191-9b69-63958b9021c9",
+      "postId": "379822581510783",
+      "url": "https://app.binance.com/uni-qr/cpos/379822581510783?r=Z2S1GMWX&l=zh-CN",
+      "verificationStatus": "verified",
+      "validationMode": "strict",
+      "warningCodes": [
+        "PREFERRED_LENGTH"
+      ]
+    },
+    {
+      "accountName": "广场账号 DC03F2A6",
+      "accountId": "acct_8b923503-569a-4065-a375-bcc43ba37e7f",
+      "lastPublishedAt": "2026-10-21T22:39:28.245Z",
+      "nextDueAt": "2026-10-21T23:08:32.245Z",
+      "jobId": "job_f9c70335-7118-434a-925a-88e516959924",
+      "postId": "379826864860997",
+      "url": "https://app.binance.com/uni-qr/cpos/379826864860997?r=Q7YCF70W&l=zh-CN",
+      "verificationStatus": "unavailable",
+      "validationMode": "publish_first",
+      "warningCodes": [
+        "PREFERRED_LENGTH",
+        "FACT_BINDING",
+        "FACT_BINDING",
+        "FACT_BINDING"
+      ]
+    },
+    {
+      "accountName": "广场账号 A13F724B",
+      "accountId": "acct_0d4de6ea-7e6a-4e37-9e76-9dfe3df0ba7a",
+      "lastPublishedAt": "2026-10-21T22:40:44.326Z",
+      "nextDueAt": "2026-10-21T23:15:43.326Z",
+      "jobId": "job_ea238eee-39b4-4a65-b865-cd35fde6a473",
+      "postId": "379827176502813",
+      "url": "https://app.binance.com/uni-qr/cpos/379827176502813?r=V2ZIEU86&l=zh-CN",
+      "verificationStatus": "verified",
+      "validationMode": "publish_first",
+      "warningCodes": [
+        "UNBOUND_PERCENT"
+      ]
+    },
+    {
+      "accountName": "广场账号 96FE2F7F",
+      "accountId": "acct_042f5d47-f905-405b-a4b3-69900a855300",
+      "lastPublishedAt": "2026-10-21T22:40:16.674Z",
+      "nextDueAt": "2026-10-21T23:00:46.674Z",
+      "jobId": "job_89dcae97-f644-4ab2-854c-d00a86252b9b",
+      "postId": "379827063250938",
+      "url": "https://app.binance.com/uni-qr/cpos/379827063250938?r=BIJ7WNUS&l=zh-CN",
+      "verificationStatus": "unavailable",
+      "validationMode": "publish_first",
+      "warningCodes": [
+        "UNBOUND_PERCENT"
+      ]
+    }
+  ]
+}
