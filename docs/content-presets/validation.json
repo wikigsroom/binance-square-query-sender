@@ -1,7 +1,7 @@
 {
-  "packId": "diverse-10-20261022",
-  "checkedAt": "2026-10-21T23:27:11.961Z",
-  "sha256": "f3e6ae1b6a415775a26edeaf6228a9474378bea73c8dae792e88600ef93e4be2",
+  "packId": "industry-memes-10-20261022",
+  "checkedAt": "2026-10-22T07:08:34.516Z",
+  "sha256": "790bb5bd16ce5f420f571ffaceb827ab99bbef35db4c008a117dace805db12a4",
   "schema": "square-service parseRules",
   "status": "passed",
   "count": 10,
@@ -17,7 +17,7 @@
       "hardLimit": 220,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "原创 Meme 涂鸦贴纸"
+      "imageStyle": "涂鸦反应 meme 梗图"
     },
     {
       "key": "market-whiplash",
@@ -30,7 +30,7 @@
       "hardLimit": 280,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "对比鲜明的3D微缩场景"
+      "imageStyle": "期待现实 meme 梗图"
     },
     {
       "key": "news-desk",
@@ -43,7 +43,7 @@
       "hardLimit": 800,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "克制的新闻编辑拼贴"
+      "imageStyle": "听说实况 meme 梗图"
     },
     {
       "key": "feature-essay",
@@ -56,7 +56,7 @@
       "hardLimit": 2000,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "杂志专题封面的手工拼贴"
+      "imageStyle": "四格反转 meme 梗图"
     },
     {
       "key": "bitcoin-macro",
@@ -69,7 +69,7 @@
       "hardLimit": 900,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "纪实静物质感的金融概念摄影"
+      "imageStyle": "夸张摆拍 meme 梗图"
     },
     {
       "key": "ethereum-defi",
@@ -82,7 +82,7 @@
       "hardLimit": 950,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "流动性管道与建筑剖面的技术插画"
+      "imageStyle": "越帮越忙 meme 梗图"
     },
     {
       "key": "solana-ecosystem",
@@ -95,7 +95,7 @@
       "hardLimit": 700,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "夜色城市与链上网络的赛博插画"
+      "imageStyle": "忙闲对照 meme 梗图"
     },
     {
       "key": "ai-depin",
@@ -108,7 +108,7 @@
       "hardLimit": 900,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "精密机器与分布式算力的产品摄影感插画"
+      "imageStyle": "工具反客为主 meme 梗图"
     },
     {
       "key": "gamefi-products",
@@ -121,7 +121,7 @@
       "hardLimit": 750,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "原创游戏世界的叙事概念插画"
+      "imageStyle": "动物打工 meme 梗图"
     },
     {
       "key": "risk-counterpoint",
@@ -134,7 +134,7 @@
       "hardLimit": 700,
       "imageMode": "generate",
       "imageFallback": "block",
-      "imageStyle": "悬疑感的建筑结构隐喻"
+      "imageStyle": "一句话破功 meme 梗图"
     }
   ]
 }

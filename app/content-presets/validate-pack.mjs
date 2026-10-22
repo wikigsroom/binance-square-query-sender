@@ -19,6 +19,8 @@ const checks = pack.presets.map((preset) => {
   assert.equal(rules.image.mode, "generate");
   assert.equal(rules.image.fallback, "block");
   assert.ok(rules.image.prompt.length > 100);
+  assert.match(rules.image.prompt, /只允许生成各行各业的 meme 梗图/);
+  assert.match(rules.image.style, /meme 梗图/);
   assert.equal(rules.image.modelId, "@default");
   assert.equal(rules.modelId, "@default");
   assert.equal(rules.image.parameters.size, "1024x1024");

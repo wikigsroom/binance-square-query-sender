@@ -522,7 +522,7 @@ function PresetForm({
               <option value="any_library">明确允许其他图库图片</option>
             </select>
           </Field>
-          <Field label="生图要求" wide>
+          <Field label="生图要求" hint="全局仅生成各行各业的 meme 梗图。此处填写梗点、主题或画风参考。" wide>
             <textarea
               rows={4}
               value={rules.image.prompt}

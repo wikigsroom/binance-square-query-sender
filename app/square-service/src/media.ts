@@ -22,6 +22,7 @@ import {
   errorInfo,
 } from "./core.js";
 import { AI } from "./ai.js";
+import { memeImageFields } from "./image-policy.js";
 
 export class Media {
   constructor(
@@ -116,6 +117,7 @@ export class Media {
         mime: `image/${info.format === "jpg" ? "jpeg" : info.format}`,
         aspectRatio: ratio(info.width!, info.height!),
         provenance,
+        ...(metadata.imagePolicy ? { imagePolicy: metadata.imagePolicy } : {}),
         origins: [provenance],
         lastUsedAt: null,
         reservedUntil: null,
@@ -203,7 +205,7 @@ export class Media {
         modelId: rule.modelId,
         prompt:
           (rule.prompt ||
-            `为这条币安广场文章生成配图。主题：${job.rules.direction}。画风：${rule.style || "编辑插画"}。不要编造可读的价格数据或新闻截图。`) +
+            `创作一张各行各业的 meme 梗图。主题参考：${job.rules.direction}。表现形式参考：${rule.style || "行业反差梗"}。`) +
           (rule.aspectRatio ? `\n画面宽高比要求：${rule.aspectRatio}。` : ""),
         parameters: rule.parameters || {},
         requestedAspectRatio: rule.aspectRatio,
@@ -255,7 +257,7 @@ export class Media {
           connectionId: selection.connection.id,
           defaultsVersion: selection.defaultsVersion,
         },
-        prompt: input.prompt,
+        ...memeImageFields(input),
         parameters: input.parameters || {},
         requestedAspectRatio: input.requestedAspectRatio || "",
         publicationJobId: input.publicationJobId || null,
@@ -279,6 +281,7 @@ export class Media {
         409,
       );
       return t.update("image_jobs", j.id, {
+        ...memeImageFields(j),
         state: "running",
         startedAt: now(),
       });

@@ -1,0 +1,156 @@
+{
+  "policyVersion": "industry-meme-v1",
+  "startedAt": "2026-10-22T07:14:42.222281+00:00",
+  "presets": [
+    {
+      "id": "preset_1940aaea-527b-439a-ac4d-e3b34834e402",
+      "name": "逆向审视｜热闹里找漏洞",
+      "previousPublishedVersionId": "preset_version_7595761a-60d3-488f-8d3c-8b18459b3948",
+      "textRulesHashBefore": "fe8d5c8bd769e069662ec21a9f7a28ea2989c5fd32cddc63362394b9bf74f4ab",
+      "publishedVersionId": "preset_version_87cd348d-88d8-457c-898e-3d404fed6e2d",
+      "publishedNumber": 2,
+      "imageStyle": "一句话破功 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "fe8d5c8bd769e069662ec21a9f7a28ea2989c5fd32cddc63362394b9bf74f4ab",
+      "verified": true
+    },
+    {
+      "id": "preset_3f45a874-f4c7-48ad-9508-998ebe2c10d5",
+      "name": "GameFi 与应用｜先好玩再谈代币",
+      "previousPublishedVersionId": "preset_version_b7a2f95d-0bd5-4dbe-a536-6bd60bf492cd",
+      "textRulesHashBefore": "c7cc614821559e52d04f0bf78696b9d657a952d82395b81b1bb842c744fb3b49",
+      "publishedVersionId": "preset_version_2f9246f3-a4b3-4d37-8d43-917ff5f0a822",
+      "publishedNumber": 2,
+      "imageStyle": "动物打工 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "c7cc614821559e52d04f0bf78696b9d657a952d82395b81b1bb842c744fb3b49",
+      "verified": true
+    },
+    {
+      "id": "preset_b02bd30f-24ae-441e-a395-aa71704a25f0",
+      "name": "AI 与 DePIN｜先看需求再听故事",
+      "previousPublishedVersionId": "preset_version_b31b9ab5-e1aa-4be9-9a91-65ae2b9bb613",
+      "textRulesHashBefore": "3d480b8c0e777d1622d0a2ffb028cdde0c8832566941830a443087090b079229",
+      "publishedVersionId": "preset_version_78d96850-d2c1-47dd-a9ea-47b8dabd64fb",
+      "publishedNumber": 2,
+      "imageStyle": "工具反客为主 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "3d480b8c0e777d1622d0a2ffb028cdde0c8832566941830a443087090b079229",
+      "verified": true
+    },
+    {
+      "id": "preset_1ca4e132-f468-42c3-8e70-bc2e72c8cc7a",
+      "name": "Solana 生态｜热闹有没有留下用户",
+      "previousPublishedVersionId": "preset_version_fefb951c-f56e-4ecc-82c3-b4ed564710ec",
+      "textRulesHashBefore": "293053a10672e0d6dc585c878a70bf92f8b3c5b03e995816769da4f52a559ede",
+      "publishedVersionId": "preset_version_5bd0c9d1-fba7-45cd-b569-8d27239a1d5f",
+      "publishedNumber": 2,
+      "imageStyle": "忙闲对照 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "293053a10672e0d6dc585c878a70bf92f8b3c5b03e995816769da4f52a559ede",
+      "verified": true
+    },
+    {
+      "id": "preset_4cbeef6c-e679-4158-9a86-75f9e237ecd1",
+      "name": "以太坊与 DeFi｜收益从哪里来",
+      "previousPublishedVersionId": "preset_version_4e0b5edd-0f7c-4eff-bdd8-7ef72851f746",
+      "textRulesHashBefore": "649fffc687c180f039420a052f5c34555b8e68f73036d549d65452560f1ba02e",
+      "publishedVersionId": "preset_version_b41f9b9b-4fc1-4c27-a7c0-79b87c285c4b",
+      "publishedNumber": 2,
+      "imageStyle": "越帮越忙 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "649fffc687c180f039420a052f5c34555b8e68f73036d549d65452560f1ba02e",
+      "verified": true
+    },
+    {
+      "id": "preset_86cf9cda-599f-4dac-9288-dd7635ae24c1",
+      "name": "比特币宏观｜资金为什么动",
+      "previousPublishedVersionId": "preset_version_5acb8b13-3a17-4f8c-9a59-de27d253c959",
+      "textRulesHashBefore": "2b7c14b248274385b47f67ba2dd4bfaf2832a1bc509da28d78b72684a3a036d9",
+      "publishedVersionId": "preset_version_3eeabcce-1bc3-4a81-8cf9-253c49cea433",
+      "publishedNumber": 2,
+      "imageStyle": "夸张摆拍 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "2b7c14b248274385b47f67ba2dd4bfaf2832a1bc509da28d78b72684a3a036d9",
+      "verified": true
+    },
+    {
+      "id": "preset_abc074e6-8ba4-48b5-98c0-cf6ba38f59af",
+      "name": "精品长文｜把一件事讲透",
+      "previousPublishedVersionId": "preset_version_7f6d779f-4dc5-4f4c-9fac-f1bee8439958",
+      "textRulesHashBefore": "7541845ced13c959ffaad73267840986fc3749045e02e9a6938d5206545cbe4c",
+      "publishedVersionId": "preset_version_5c0ec990-3463-4500-90fa-38792c0b3e94",
+      "publishedNumber": 2,
+      "imageStyle": "四格反转 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "7541845ced13c959ffaad73267840986fc3749045e02e9a6938d5206545cbe4c",
+      "verified": true
+    },
+    {
+      "id": "preset_b88a9787-e0c0-4ea0-a22a-dae1e4b92b32",
+      "name": "News 拆解｜消息到底改变了什么",
+      "previousPublishedVersionId": "preset_version_c0857cd2-90c9-4775-95e8-b2b9c23a06fa",
+      "textRulesHashBefore": "f28d7c08bca61332a58cc9a6cf383785c5c97d152de2cda7bf904910f4bed8e9",
+      "publishedVersionId": "preset_version_2541ce55-c93d-4515-ace7-72d494a4de76",
+      "publishedNumber": 2,
+      "imageStyle": "听说实况 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "f28d7c08bca61332a58cc9a6cf383785c5c97d152de2cda7bf904910f4bed8e9",
+      "verified": true
+    },
+    {
+      "id": "preset_49cedcfd-92dd-40fa-b080-e36910d160f7",
+      "name": "涨跌榜现场｜散户碎碎念",
+      "previousPublishedVersionId": "preset_version_2141404a-8bb4-423f-9f4b-8f6ffafd1d64",
+      "textRulesHashBefore": "a3c6d9b22c7c9cc4081a94eecd4e3f3f508c7889d192e95c053227ecdb7e1a65",
+      "publishedVersionId": "preset_version_9dc0c8c0-ab46-4995-b41a-6016d339e652",
+      "publishedNumber": 2,
+      "imageStyle": "期待现实 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "a3c6d9b22c7c9cc4081a94eecd4e3f3f508c7889d192e95c053227ecdb7e1a65",
+      "verified": true
+    },
+    {
+      "id": "preset_1342492c-e791-4514-9b26-d3c2a0948f78",
+      "name": "Meme 整活｜狗狗与青蛙",
+      "previousPublishedVersionId": "preset_version_a8a69c13-1cee-4ebe-871c-2ae91ef3aec2",
+      "textRulesHashBefore": "25f0919ac7d687ef2988b92a15f315056972f0f6991d046a012206cd05dff15c",
+      "publishedVersionId": "preset_version_05fba65e-ac5c-4efc-a344-515de3227de6",
+      "publishedNumber": 2,
+      "imageStyle": "涂鸦反应 meme 梗图",
+      "imageMode": "generate",
+      "textRulesHashAfter": "25f0919ac7d687ef2988b92a15f315056972f0f6991d046a012206cd05dff15c",
+      "verified": true
+    }
+  ],
+  "backup": "/opt/square-platform/deploy/industry-meme-before-20261022T071442Z.json",
+  "accountConfigurationPreserved": true,
+  "runtimeSettingsPreserved": true,
+  "finishedAt": "2026-10-22T07:14:42.504880+00:00",
+  "status": "passed",
+  "verifiedAt": "2026-10-22T07:17:57.651365+00:00",
+  "release": "20261022-industry-memes",
+  "service": "active",
+  "runtime": {
+    "paused": false,
+    "contentValidationMode": "publish_first",
+    "publishTransportEnabled": true
+  },
+  "liveAdapterPolicy": {
+    "policyVersion": "industry-meme-v1",
+    "industryCount": 22,
+    "formatCount": 6,
+    "memeOnly": true,
+    "jobBriefStable": true,
+    "modelRequests": 0
+  },
+  "publishedPresetChecks": 10,
+  "validation": {
+    "backendTestsPassed": 64,
+    "typeChecks": "passed",
+    "backendBuild": "passed",
+    "frontendBuild": "passed",
+    "presetSchemaChecksPassed": 10,
+    "extraPaidImageRequests": 0
+  }
+}

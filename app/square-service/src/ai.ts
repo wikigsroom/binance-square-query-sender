@@ -12,6 +12,7 @@ import {
   redact,
 } from "./core.js";
 import { Http } from "./http.js";
+import { memeImageFields } from "./image-policy.js";
 import {
   protocolFor,
   providerHeaders,
@@ -460,6 +461,7 @@ export class AI {
     return { run, content };
   }
   async image(job: Row) {
+    job = { ...job, ...memeImageFields(job) };
     const { model, connection, key } = await this.connection(
         job.modelId,
         "image",
@@ -520,6 +522,8 @@ export class AI {
         requestId: response.headers.get("x-request-id") || raw.id || null,
         identityEvidence: raw.model ? "provider_reported" : "request_only",
         prompt: job.prompt,
+        imagePolicy: job.imagePolicy,
+        requestedPrompt: job.requestedPrompt,
         requestBody: request,
         parameters: params,
         startedAt,
@@ -561,6 +565,8 @@ export class AI {
         requestedModel: model.externalId,
         ...providerEvidence(connection, model),
         prompt: job.prompt,
+        imagePolicy: job.imagePolicy,
+        requestedPrompt: job.requestedPrompt,
         requestBody: request,
         parameters: params,
         startedAt,

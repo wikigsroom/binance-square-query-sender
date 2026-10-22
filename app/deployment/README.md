@@ -14,7 +14,9 @@
 
 随后已按用户要求开启全部7个账号的自动发布，复用样例的8个等权预设与20—40分钟随机周期，见 [当前运行状态](../../docs/16-auto-publishing-enabled.md)。全局已恢复，服务器实际发布传输已启用；此前验证报告中的暂停状态仅是当时的历史记录。`scripts/enable-auto-publishing.sh` 为本次配置操作，不能当作定时任务重复执行；`verify-auto-publishing.mjs` 读取页面与账号状态并关闭本轮浏览器。
 
-最新生产版本为 `20261022-publish-first`。用户要求内容校验不阻止发布，现已启用全局 `contentValidationMode=publish_first`，见 [排查与发送优先说明](../../docs/17-publication-validation-and-priority.md)。`scripts/inspect-publication-validation.sh` 只读获取具体失败、模型输出、逐轮校验与远端回执；`scripts/enable-publish-first.sh` 设置运行模式，并逐账号恢复最近一个未提交的内容校验失败任务；`verify-publication-validation.mjs --publish-first` 核验生产运行界面并关闭浏览器。
+此前版本 `20261022-publish-first` 已部署。用户要求内容校验不阻止发布，现已启用全局 `contentValidationMode=publish_first`，见 [排查与发送优先说明](../../docs/17-publication-validation-and-priority.md)。`scripts/inspect-publication-validation.sh` 只读获取具体失败、模型输出、逐轮校验与远端回执；`scripts/enable-publish-first.sh` 设置运行模式，并逐账号恢复最近一个未提交的内容校验失败任务；`verify-publication-validation.mjs --publish-first` 核验生产运行界面并关闭浏览器。
+
+最新生产版本为 `20261022-industry-memes`，所有新生图只允许各行各业的 meme 梗图。`scripts/update-meme-image-policy.sh` 只更新十份预设的图片部分并保留正文和账号设置；`scripts/verify-meme-image-policy.sh` 核验线上策略、版本和服务，不请求付费模型，见[生图策略记录](../../docs/19-industry-meme-image-policy.md)。
 
 - `ssh_remote.py`：原生 SSH/SFTP，连接配置从被忽略的 `.private/ssh.json` 读取。
 - `package_release.py`：只打包后端生产构建、迁移文件、锁文件和前端静态构建。

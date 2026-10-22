@@ -345,9 +345,10 @@ function ImageCreate({
         models={models || []}
         type="image"
       />
-      <Field label="生图要求">
+      <Field label="梗图要求" hint="只生成各行各业的 meme 梗图；行业与表现形式会随机变化。">
         <textarea
           rows={6}
+          placeholder="例如：把需求反复修改画成一个一眼能懂的行业反差梗。"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
         />

@@ -8,7 +8,7 @@ This monorepo includes the frontend, backend, database schema, ten writing/image
 
 ![Production dashboard](docs/product/screenshots/02-overview-light.png)
 
-> Documentation baseline: October 22, 2026, Asia/Taipei. Application packages: `0.2.0`. Recorded production release: `20261022-publish-first`. Screenshots show the actual deployed product on that date; counters are capture-time observations. Credential display areas are masked. Real keys, administrator passwords, databases, and operational batches are excluded from Git.
+> Documentation baseline: October 22, 2026, Asia/Taipei. Application packages: `0.2.0`. Recorded production release: `20261022-industry-memes`. Screenshots show the actual deployed product earlier that day, before the meme-only image update; counters are capture-time observations. Credential display areas are masked. Real keys, administrator passwords, databases, and operational batches are excluded from Git.
 
 ## Contents
 
@@ -158,7 +158,7 @@ Each generation stores the rendered complete prompt and version, request URL, re
 
 ### Image provenance
 
-Only managed library images or approved GPT Image 2 job outputs are publishable. The service reads the real file, validates type/dimensions/aspect ratio/hash, records provenance and ingests it first. Presets choose library, generation or mixed selection and define empty-library/failure handling. All ten bundled presets request a fresh image per article and block on failure rather than substitute a placeholder.
+Only managed library images or approved GPT Image 2 job outputs are publishable. The service reads the real file, validates type/dimensions/aspect ratio/hash, records provenance and ingests it first. Presets choose library, generation or mixed selection and define empty-library/failure handling. All ten bundled presets request a fresh image per article and block on failure rather than substitute a placeholder. **Updated 2026-10-22: every newly generated image must be a meme/joke image about varied industries**, including manual jobs and legacy queued jobs. Runtime randomly chooses an industry and meme format and records the effective prompt, policy version and industry. Ordinary editorial illustrations and concept covers are excluded. See the [image policy](docs/19-industry-meme-image-policy.md).
 
 ## Independent randomized scheduling
 
@@ -203,16 +203,16 @@ Presets control freshness, required/optional sources, token counts, fixed versus
 
 | # | Preset | Preferred characters / maximum | Dedicated image direction |
 | --- | --- | --- | --- |
-| 1 | Meme: dogs and frogs | 100–180 / 220 | Original frog/dog doodle stickers |
-| 2 | Gainers/losers: retail commentary | 140–230 / 280 | Three-token 3D miniature stage |
-| 3 | News: what the event changes | 350–650 / 800 | Paper, lens and editorial collage |
-| 4 | Long-form: explain one issue fully | 1200–1800 / 2000 | Graphite, glass and handmade-paper feature art |
-| 5 | Bitcoin macro and capital flows | 400–700 / 900 | Copper discs, streams and valves |
-| 6 | Ethereum/DeFi: where yield comes from | 450–750 / 950 | Pipes, reservoirs and safety-valve cutaway |
-| 7 | Solana: activity versus retained users | 320–550 / 700 | Purple/green network city with visible use |
-| 8 | AI/DePIN: demand before narrative | 450–700 / 900 | Computing modules and productive workbench |
-| 9 | GameFi/apps: product before tokens | 350–600 / 750 | Original characters solving a tabletop mechanism |
-| 10 | Contrarian: questions behind the hype | 320–550 / 700 | Stage facade and its supporting structures |
+| 1 | Meme: dogs and frogs | 100–180 / 220 | Doodle reaction meme |
+| 2 | Gainers/losers: retail commentary | 140–230 / 280 | Expectation versus reality meme |
+| 3 | News: what the event changes | 350–650 / 800 | What was said versus what happened meme |
+| 4 | Long-form: explain one issue fully | 1200–1800 / 2000 | Four-panel twist meme |
+| 5 | Bitcoin macro and capital flows | 400–700 / 900 | Absurd staged-photo meme |
+| 6 | Ethereum/DeFi: where yield comes from | 450–750 / 950 | Helping makes things worse meme |
+| 7 | Solana: activity versus retained users | 320–550 / 700 | Busy versus idle contrast meme |
+| 8 | AI/DePIN: demand before narrative | 450–700 / 900 | Tools make more work meme |
+| 9 | GameFi/apps: product before tokens | 350–600 / 750 | Animals at work meme |
+| 10 | Contrarian: questions behind the hype | 320–550 / 700 | One-line reality-check meme |
 
 The portable [presets.json](app/content-presets/presets.json) contains full writing/image instructions. [Preset documentation](docs/14-ten-content-presets.md) describes model bindings, news requirements and import behavior. Character counting uses Unicode code points including tags, punctuation, whitespace and newlines. The platform does not impose the earlier universal 200-character rule.
 
@@ -386,7 +386,7 @@ npm run test:dashboard       # Starts/stops isolated workbenches; ports 4300/432
 npm run verify:repository    # Staged files, credentials, nested Git links and documentation links
 ```
 
-Browser tests use native Chrome/Chromium; set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` when needed. CI runs natively on Ubuntu/Node without production accounts or paid models. Both type checks/builds passed, along with **61 backend, 13 browser and 9 earlier-tool tests: 83 in total**. Details are recorded in [the delivery record](docs/18-repository-delivery.md).
+Browser tests use native Chrome/Chromium; set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` when needed. CI runs natively on Ubuntu/Node without production accounts or paid models. For the original repository delivery, both type checks/builds passed, along with **61 backend, 13 browser and 9 earlier-tool tests: 83 in total**. Details are recorded in [the delivery record](docs/18-repository-delivery.md). The subsequent industry-meme update passed **64 backend tests**, both type checks/builds and ten preset-schema checks; see the [update record](docs/19-industry-meme-image-policy.md).
 
 There are **20 actual production screenshots**. Capture blocks API writes other than login/logout, verifies runtime switches were unchanged and closes the browser in `finally`. See the [capture manifest](docs/product/capture-manifest.json) for times, routes, environment and results. To recapture with private administrator configuration, run `npm run capture:product`; override targets with `SQUARE_CAPTURE_ORIGIN` / `SQUARE_CAPTURE_API_ORIGIN`. Capture does not preview, publish, change schedules or request post reverification.
 

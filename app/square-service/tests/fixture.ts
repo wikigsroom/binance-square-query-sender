@@ -30,6 +30,7 @@ export async function fixture() {
     reviewFailure: boolean;
     responses: Map<string, Doc>;
     textRequests: Doc[];
+    imageRequests: Doc[];
   } = {
     calls: 0,
     modelCalls: 0,
@@ -41,6 +42,7 @@ export async function fixture() {
     reviewFailure: false,
     responses: new Map(),
     textRequests: [],
+    imageRequests: [],
   };
   const png = await sharp({
     create: { width: 64, height: 64, channels: 3, background: "#edb43e" },
@@ -235,6 +237,7 @@ export async function fixture() {
       );
     }
     if (req.url === "/images/generations") {
+      state.imageRequests.push(b);
       state.imageCalls++;
       return res.end(
         JSON.stringify({

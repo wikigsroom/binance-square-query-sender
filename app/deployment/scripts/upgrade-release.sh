@@ -16,10 +16,19 @@ current = root / 'current'
 old = current.resolve()
 release = root / 'releases' / manifest['release']
 assert current.is_symlink() and old.parent == root / 'releases' and old.is_dir()
-assert not release.exists(), 'Release already exists; inspect before retrying'
-release.mkdir()
-with tarfile.open(archive) as stream:
-    stream.extractall(release, filter='data')
+if release.exists():
+    assert release != old and not (root / 'backups' / manifest['release']).exists(), 'Release was already activated; inspect before retrying'
+    with tarfile.open(archive) as stream:
+        for member in stream.getmembers():
+            if member.isfile():
+                file = (release / member.name).resolve()
+                assert file.is_relative_to(release.resolve()) and file.is_file(), 'Prepared release path mismatch'
+                assert hashlib.sha256(file.read_bytes()).digest() == hashlib.sha256(stream.extractfile(member).read()).digest(), 'Prepared release content mismatch'
+    print('Verified previously prepared, inactive release against archive', flush=True)
+else:
+    release.mkdir()
+    with tarfile.open(archive) as stream:
+        stream.extractall(release, filter='data')
 account = pwd.getpwnam('square-platform')
 for base, dirs, files in os.walk(release / 'service'):
     os.chown(base, account.pw_uid, account.pw_gid)
@@ -29,6 +38,8 @@ subprocess.run(['runuser', '-u', 'square-platform', '--', '/usr/local/bin/npm', 
 subprocess.run(['runuser', '-u', 'square-platform', '--', '/usr/local/bin/node', '--input-type=module', '-e', 'import "cheerio"; import sharp from "sharp"; console.log("Native runtime imports verified")'], cwd=release / 'service', check=True)
 active = subprocess.check_output(['runuser', '-u', 'postgres', '--', 'psql', '-X', '-p', '5433', '-d', 'square_platform', '-tAc', "SELECT count(*) FROM jobs WHERE data->>'state' IN ('preparing','generating_text','validating','preparing_media','ready','submitting')"], text=True).strip()
 assert active == '0', 'Jobs are active; current service left running'
+active_images = subprocess.check_output(['runuser', '-u', 'postgres', '--', 'psql', '-X', '-p', '5433', '-d', 'square_platform', '-tAc', "SELECT count(*) FROM image_jobs WHERE data->>'state'='running'"], text=True).strip()
+assert active_images == '0', 'An image request is active; current service left running'
 backup = root / 'backups' / manifest['release']
 backup.mkdir(mode=0o700)
 with (backup / 'database.dump').open('wb') as out:
