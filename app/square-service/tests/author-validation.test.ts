@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { fixture } from "./fixture.js";
 import { Doc, Row, hash, now } from "../src/core.js";
 import { validate } from "../src/validation.js";
+import { writingHistory } from "../src/writing-context.js";
 
 test("author receives literal required tags, conditional market claims and complete prior draft", async (t) => {
   const f = await fixture();
@@ -148,3 +149,59 @@ test("job detail exposes failed validation history even for records without a va
 function jobAttempts(job: Row) {
   return job.rules.repairAttempts + 1;
 }
+
+test("writing and review requests exclude image configuration and contaminated examples while images retain their brief", async (t) => {
+  const f = await fixture();
+  t.after(f.close);
+  const base = await f.job();
+  const imageMarker = "IMAGE_ONLY_SENTINEL_FOR_WIRE_ISOLATION";
+  const job = {
+    ...base,
+    rules: {
+      ...base.rules,
+      image: { ...base.rules.image, mode: "generate", modelId: f.imageModel.id, prompt: imageMarker, style: imageMarker },
+      futureImagePolicy: { prompt: imageMarker },
+    },
+  };
+  const input = await f.sources.collect(job);
+  const clean = "我想看项目的实际进展，价格本身不能说明用户会留下。";
+  const history = [
+    { text: "行业梗图：一只戴工牌的河狸策划，把流程图贴满墙。\n\n这段是已发布的错误示例。" },
+    { text: "先看数据。\n\n梗图可以画一只认真打工的水獭。" },
+    { text: "四格梗图：第一格等需求，最后一格又改回第一稿。" },
+    { text: clean },
+  ].map((row, index) => ({ ...row, id: `history_${index}`, version: 1, createdAt: now(), updatedAt: now() }));
+  const { content } = await f.ai.text(job, input, history);
+  await f.ai.review(job, content, input, history);
+  assert.equal(f.state.textRequests.length, 2);
+  for (const wire of f.state.textRequests) {
+    const messages = wire.body.messages;
+    const data = JSON.parse(messages.find((m: Doc) => m.role === "user").content);
+    assert.equal(data.rules.image, undefined);
+    assert.equal(data.rules.futureImagePolicy, undefined);
+    assert.equal(data.rules.modelId, undefined, "transport settings stay outside writing rules");
+    assert.equal(data.rules.direction, job.rules.direction);
+    assert.equal(data.rules.maxChars, job.rules.maxChars);
+    assert.equal(data.rules.tone, job.rules.tone);
+    assert.ok(!JSON.stringify(wire.body).includes(imageMarker));
+    assert.deepEqual(data.previousPostsForDiversityOnly || data.historyForDiversityOnly, [clean]);
+    assert.ok(messages[0].content.includes("正文") && messages[0].content.includes("配图说明"));
+  }
+  assert.equal(f.state.imageCalls, 0);
+  await f.media.choose(job);
+  assert.equal(f.state.imageCalls, 1);
+  assert.ok(f.state.imageRequests[0].prompt.includes(imageMarker), "image instructions reach only the image model");
+  assert.equal(job.rules.image.prompt, imageMarker, "the frozen preset must not be mutated");
+  assert.equal(f.state.calls, 0);
+});
+
+test("history filtering retains normal meme discussion and does not alter stored examples", () => {
+  const rows = [
+    { text: "我觉得这轮Meme热度得看真实使用，不能只看梗图传播。" },
+    { text: "**配图说明：**两名同事围着表格争论。" },
+    { text: "Image prompt: an animal in an office" },
+    { text: "梗图可以画成一位快递员寻找门牌。" },
+  ].map((row, index) => ({ ...row, id: `history_${index}`, version: 1, createdAt: now(), updatedAt: now() }));
+  assert.deepEqual(writingHistory(rows), [rows[0].text]);
+  assert.ok(rows[1].text.startsWith("**配图说明"));
+});

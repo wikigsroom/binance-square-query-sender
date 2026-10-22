@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-23T05:20:08.883601+08:00",
+  "release": "20261023-text-image-isolation",
+  "service": "active",
+  "runtime": {
+    "paused": false,
+    "contentValidationMode": "publish_first"
+  },
+  "livePromptChecks": {
+    "promptVersion": "square-author/1.3.0",
+    "imagePolicyVersion": "industry-meme-v1",
+    "authorReceivesImageRules": false,
+    "textDirectionPreserved": true,
+    "textLengthPreserved": true,
+    "previousExamples": 40,
+    "cleanExamples": 2,
+    "originalImageMode": "generate",
+    "originalImageModelId": "model_f82a2fa4-557d-487e-b79b-e20ddcf20c40",
+    "modelRequests": 0
+  },
+  "observedNewAuthorRuns": [],
+  "validation": {
+    "backendTestsPassed": 66,
+    "backendTypeCheck": "passed",
+    "backendBuild": "passed",
+    "extraPaidModelRequests": 0
+  },
+  "historicalInspection": {
+    "checkedAt": "2026-10-23T05:14:23+08:00",
+    "recentPostsChecked": 100,
+    "postsWithImageBriefMarkers": 66,
+    "exactExamplePublishedAt": "2026-10-23T05:09:19+08:00",
+    "exampleMatchesParsedModelText": true,
+    "exampleModel": "gpt-6-luna",
+    "contaminatedExamplesInItsHistory": 33,
+    "historyWindow": 40
+  }
+}

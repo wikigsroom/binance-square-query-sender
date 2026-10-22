@@ -14,6 +14,7 @@
 4. A confirmed, in-flight or uncertain submission must not be submitted again blindly. Publish receipts and independent public verification are separate states. 不能用一次读取失败推断发帖失败并再次发帖。
 5. User requirements and the latest saved runtime settings take precedence over historical examples. Production currently uses `publish_first`: stylistic/factual metadata findings are warnings; body presence, maximum length, AI provenance, media integrity, account/transport state and duplicate prevention remain enforced. New installations default to `strict`.
 6. Writing length, selected tokens, sources and style come from the frozen preset version. The earlier 70/200-character, three-token rules apply to the legacy workflow, not every platform preset. 情绪性通过内容表达，不要求正文出现“情绪”等字眼。
+7. Keep image instructions out of text author/reviewer requests. Use the explicit writing-rule projection; never pass the whole preset with its image configuration. Only images follow the industry-meme rule. 正文不得混入配图说明、梗图脚本、生图提示词或分镜；有明显画面脚本的历史帖不作为文字模型参考，原始记录继续保留。
 
 ## Credentials and operations / 凭据与运维
 

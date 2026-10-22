@@ -16,7 +16,9 @@
 
 此前版本 `20261022-publish-first` 已部署。用户要求内容校验不阻止发布，现已启用全局 `contentValidationMode=publish_first`，见 [排查与发送优先说明](../../docs/17-publication-validation-and-priority.md)。`scripts/inspect-publication-validation.sh` 只读获取具体失败、模型输出、逐轮校验与远端回执；`scripts/enable-publish-first.sh` 设置运行模式，并逐账号恢复最近一个未提交的内容校验失败任务；`verify-publication-validation.mjs --publish-first` 核验生产运行界面并关闭浏览器。
 
-最新生产版本为 `20261022-industry-memes`，所有新生图只允许各行各业的 meme 梗图。`scripts/update-meme-image-policy.sh` 只更新十份预设的图片部分并保留正文和账号设置；`scripts/verify-meme-image-policy.sh` 核验线上策略、版本和服务，不请求付费模型，见[生图策略记录](../../docs/19-industry-meme-image-policy.md)。
+此前生图策略版本为 `20261022-industry-memes`，所有新生图只允许各行各业的 meme 梗图。`scripts/update-meme-image-policy.sh` 只更新十份预设的图片部分并保留正文和账号设置；`scripts/verify-meme-image-policy.sh` 核验线上策略、版本和服务，不请求付费模型，见[生图策略记录](../../docs/19-industry-meme-image-policy.md)。
+
+最新生产版本为 `20261023-text-image-isolation`，隔离文字与图片模型的配置，防止梗图脚本进入文章。`scripts/verify-writing-image-isolation.sh` 只读重建问题任务的写作请求并检查线上版本、历史上下文与后续调用，不请求付费模型，详见[排查与修复记录](../../docs/20-writing-image-context-isolation.md)。
 
 - `ssh_remote.py`：原生 SSH/SFTP，连接配置从被忽略的 `.private/ssh.json` 读取。
 - `package_release.py`：只打包后端生产构建、迁移文件、锁文件和前端静态构建。

@@ -8,7 +8,7 @@ This monorepo includes the frontend, backend, database schema, ten writing/image
 
 ![Production dashboard](docs/product/screenshots/02-overview-light.png)
 
-> Documentation baseline: October 22, 2026, Asia/Taipei. Application packages: `0.2.0`. Recorded production release: `20261022-industry-memes`. Screenshots show the actual deployed product earlier that day, before the meme-only image update; counters are capture-time observations. Credential display areas are masked. Real keys, administrator passwords, databases, and operational batches are excluded from Git.
+> Documentation baseline: October 22, 2026, Asia/Taipei. Application packages: `0.2.0`. Recorded production release: `20261023-text-image-isolation`. Screenshots show the actual deployed product earlier that day, before the meme-only image update; counters are capture-time observations. Credential display areas are masked. Real keys, administrator passwords, databases, and operational batches are excluded from Git.
 
 ## Contents
 
@@ -158,7 +158,7 @@ Each generation stores the rendered complete prompt and version, request URL, re
 
 ### Image provenance
 
-Only managed library images or approved GPT Image 2 job outputs are publishable. The service reads the real file, validates type/dimensions/aspect ratio/hash, records provenance and ingests it first. Presets choose library, generation or mixed selection and define empty-library/failure handling. All ten bundled presets request a fresh image per article and block on failure rather than substitute a placeholder. **Updated 2026-10-22: every newly generated image must be a meme/joke image about varied industries**, including manual jobs and legacy queued jobs. Runtime randomly chooses an industry and meme format and records the effective prompt, policy version and industry. Ordinary editorial illustrations and concept covers are excluded. See the [image policy](docs/19-industry-meme-image-policy.md).
+Only managed library images or approved GPT Image 2 job outputs are publishable. The service reads the real file, validates type/dimensions/aspect ratio/hash, records provenance and ingests it first. Presets choose library, generation or mixed selection and define empty-library/failure handling. All ten bundled presets request a fresh image per article and block on failure rather than substitute a placeholder. **Updated 2026-10-22: every newly generated image must be a meme/joke image about varied industries**, including manual jobs and legacy queued jobs. Runtime randomly chooses an industry and meme format and records the effective prompt, policy version and industry. Ordinary editorial illustrations and concept covers are excluded. See the [image policy](docs/19-industry-meme-image-policy.md). Author/reviewer requests receive text-only rules: image prompts stay out of text generation, and past posts with explicit image-script markers are excluded from writing context. See the [context-isolation fix](docs/20-writing-image-context-isolation.md).
 
 ## Independent randomized scheduling
 
