@@ -31,6 +31,7 @@ export async function fixture() {
     responses: Map<string, Doc>;
     textRequests: Doc[];
     imageRequests: Doc[];
+    authorTexts: string[];
   } = {
     calls: 0,
     modelCalls: 0,
@@ -43,6 +44,7 @@ export async function fixture() {
     responses: new Map(),
     textRequests: [],
     imageRequests: [],
+    authorTexts: [],
   };
   const png = await sharp({
     create: { width: 64, height: 64, channels: 3, background: "#edb43e" },
@@ -206,11 +208,11 @@ export async function fixture() {
         (f: Doc) =>
           `$${f.token} ${f.roundedPercent >= 0 ? "+" : ""}${f.roundedPercent.toFixed(2)}%`,
       );
-      const text = state.badText
+      const text = state.authorTexts.shift() ?? (state.badText
         ? "情绪上来了"
         : state.modelCalls % 2 === 0
           ? `这24小时看得我直挠头：${quotes.join("，")}。\n\n我不想天天追着榜单跑。项目到底做成了什么，得把数据摆出来。拉起来就喊未来、跌下去就说归零，这种故事我真听够了。`
-          : `看完这轮24小时榜单，我还是有点不服气。${quotes.join("，")}。\n\n涨得猛就能说明项目好？我更想看真实进展。跌的也别急着判死刑，得拿出具体的东西再聊。${input.task.revision ? "这次先把观察重点留给后续兑现。" : ""}`;
+          : `看完这轮24小时榜单，我还是有点不服气。${quotes.join("，")}。\n\n涨得猛就能说明项目好？我更想看真实进展。跌的也别急着判死刑，得拿出具体的东西再聊。${input.task.revision ? "这次先把观察重点留给后续兑现。" : ""}`);
       return res.end(
         JSON.stringify({
           id: `fixture-${state.modelCalls}`,

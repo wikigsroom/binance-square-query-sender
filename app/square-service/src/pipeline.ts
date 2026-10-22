@@ -18,6 +18,7 @@ import { AI } from "./ai.js";
 import { Media } from "./media.js";
 import { validate } from "./validation.js";
 import { SquarePort } from "./square.js";
+import { imageBriefInBody } from "./article-policy.js";
 
 export class Pipeline {
   readonly owner = id("worker");
@@ -559,6 +560,14 @@ export class Pipeline {
         v.passed && v.presetVersionId === j.presetVersionId,
         "TEXT_VALIDATION_FAILED",
         "当前版本未通过校验。",
+      );
+      const imageBrief = imageBriefInBody(c.text);
+      requireThat(
+        !imageBrief,
+        "IMAGE_BRIEF_IN_BODY",
+        "正文混入图片制作说明，必须由 AI 重写文章后才能发送。",
+        422,
+        imageBrief || {},
       );
       requireThat(
         runtime.contentValidationMode === "publish_first" ||

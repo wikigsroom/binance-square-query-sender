@@ -1,0 +1,151 @@
+{
+  "checkedAt": "2026-10-23T05:53:50.299891+08:00",
+  "release": "20261023-article-body-guard",
+  "service": "active",
+  "apiReady": true,
+  "runtime": {
+    "paused": false,
+    "contentValidationMode": "publish_first"
+  },
+  "activeJobs": 0,
+  "checks": {
+    "promptVersion": "square-author/1.4.0",
+    "articlePolicyVersion": "article-body-v1",
+    "imagePolicyVersion": "industry-meme-v1",
+    "presetChecks": [
+      {
+        "presetId": "preset_1940aaea-527b-439a-ac4d-e3b34834e402",
+        "name": "逆向审视｜热闹里找漏洞",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_3f45a874-f4c7-48ad-9508-998ebe2c10d5",
+        "name": "GameFi 与应用｜先好玩再谈代币",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_b02bd30f-24ae-441e-a395-aa71704a25f0",
+        "name": "AI 与 DePIN｜先看需求再听故事",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_1ca4e132-f468-42c3-8e70-bc2e72c8cc7a",
+        "name": "Solana 生态｜热闹有没有留下用户",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_4cbeef6c-e679-4158-9a86-75f9e237ecd1",
+        "name": "以太坊与 DeFi｜收益从哪里来",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_86cf9cda-599f-4dac-9288-dd7635ae24c1",
+        "name": "比特币宏观｜资金为什么动",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_abc074e6-8ba4-48b5-98c0-cf6ba38f59af",
+        "name": "精品长文｜把一件事讲透",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_b88a9787-e0c0-4ea0-a22a-dae1e4b92b32",
+        "name": "News 拆解｜消息到底改变了什么",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_49cedcfd-92dd-40fa-b080-e36910d160f7",
+        "name": "涨跌榜现场｜散户碎碎念",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      },
+      {
+        "presetId": "preset_1342492c-e791-4514-9b26-d3c2a0948f78",
+        "name": "Meme 整活｜狗狗与青蛙",
+        "textDirectionPreserved": true,
+        "textLengthPreserved": true,
+        "imageConfigExcluded": true,
+        "revisionAndRepairIsolated": true,
+        "imageMode": "generate"
+      }
+    ],
+    "originalIncidentRejectedInBothModes": true,
+    "previousExamples": 40,
+    "cleanExamples": 9,
+    "observedNewAuthorRuns": [
+      {
+        "id": "generation_run_cc0f6ef0-7ad6-487a-a07c-d4fa894ddf6e",
+        "jobId": "job_953ea515-a89e-44b9-b122-1f1997787c52",
+        "state": "completed",
+        "promptVersion": "square-author/1.4.0",
+        "requestedModel": "gpt-6-luna",
+        "createdAt": "2026-10-23T05:51:43.085+08:00",
+        "receivesImageRules": false,
+        "imageBriefDetected": false,
+        "characterCount": 478
+      },
+      {
+        "id": "generation_run_81e77838-787d-4b64-ac44-5106c5f1330e",
+        "jobId": "job_953ea515-a89e-44b9-b122-1f1997787c52",
+        "state": "completed",
+        "promptVersion": "square-author/1.4.0",
+        "requestedModel": "gpt-6-luna",
+        "createdAt": "2026-10-23T05:51:26.915+08:00",
+        "receivesImageRules": false,
+        "imageBriefDetected": false,
+        "characterCount": 0
+      },
+      {
+        "id": "generation_run_789b37db-2d27-4005-b4e7-cd28ec840376",
+        "jobId": "job_b3c5062b-4d8f-4822-8f1f-dae33a86ab3b",
+        "state": "completed",
+        "promptVersion": "square-author/1.4.0",
+        "requestedModel": "gpt-6-luna",
+        "createdAt": "2026-10-23T05:50:11.79+08:00",
+        "receivesImageRules": false,
+        "imageBriefDetected": false,
+        "characterCount": 175
+      }
+    ],
+    "observedNewPublishedPosts": [],
+    "previousReleasePublishedCount": 7,
+    "previousReleasePostsWithImageBrief": 0,
+    "modelRequests": 0
+  },
+  "verificationScope": "Read-only production requests, original incident, all published presets, model output and publication records; public verification status is recorded separately."
+}

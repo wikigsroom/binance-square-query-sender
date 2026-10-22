@@ -1,5 +1,6 @@
 import { Row, Doc, hash, chars, normalize } from "./core.js";
 import { Rules } from "./rules.js";
+import { ARTICLE_POLICY_VERSION, imageBriefInBody } from "./article-policy.js";
 
 export function validate(
   content: Row,
@@ -16,7 +17,7 @@ export function validate(
     const issue = { code, message, ...details };
     if (
       validationMode === "publish_first" &&
-      !["CONTENT_HASH_MISMATCH", "TEXT_LENGTH"].includes(code)
+      !["CONTENT_HASH_MISMATCH", "TEXT_LENGTH", "IMAGE_BRIEF_IN_BODY"].includes(code)
     )
       warnings.push({ ...issue, nonBlocking: true });
     else errors.push(issue);
@@ -28,6 +29,9 @@ export function validate(
       actual: chars(text),
       limit: rules.maxChars,
     });
+  const imageBrief = imageBriefInBody(text);
+  if (imageBrief)
+    fail("IMAGE_BRIEF_IN_BODY", "正文混入图片制作说明，必须由 AI 重写文章后才能发送。", imageBrief);
   if (chars(text) < rules.preferredMin || chars(text) > rules.preferredMax)
     warnings.push({ code: "PREFERRED_LENGTH", actual: chars(text) });
   for (const word of new Set([...bannedWords, ...rules.bannedWords]))
@@ -181,6 +185,7 @@ export function validate(
     fail("META_NARRATION", "正文包含创作说明。");
   return {
     validationMode,
+    articlePolicyVersion: ARTICLE_POLICY_VERSION,
     passed: errors.length === 0,
     errors,
     warnings,

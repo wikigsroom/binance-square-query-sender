@@ -18,7 +18,9 @@
 
 此前生图策略版本为 `20261022-industry-memes`，所有新生图只允许各行各业的 meme 梗图。`scripts/update-meme-image-policy.sh` 只更新十份预设的图片部分并保留正文和账号设置；`scripts/verify-meme-image-policy.sh` 核验线上策略、版本和服务，不请求付费模型，见[生图策略记录](../../docs/19-industry-meme-image-policy.md)。
 
-最新生产版本为 `20261023-text-image-isolation`，隔离文字与图片模型的配置，防止梗图脚本进入文章。`scripts/verify-writing-image-isolation.sh` 只读重建问题任务的写作请求并检查线上版本、历史上下文与后续调用，不请求付费模型，详见[排查与修复记录](../../docs/20-writing-image-context-isolation.md)。
+初次隔离版本为 `20261023-text-image-isolation`；`scripts/verify-writing-image-isolation.sh` 是该历史版本的检查脚本。系统性修复版本为 `20261023-article-body-guard`，补齐旧稿改写、失败返修、新闻上下文以及正文校验和最终提交边界。使用 `scripts/verify-article-body.sh` 只读核验十种已发布预设、原始问题帖、真实模型请求和后续发布记录，不调用模型或新增帖子。详见[排查与修复记录](../../docs/20-writing-image-context-isolation.md)。
+
+`scripts/exercise-article-body-previews.sh` 是该版本的真实模型验收操作：按固定幂等键依次运行Meme、GameFi两个预览，调用现有文字与图片模型；再次运行只读取已有任务，首个完成后才创建第二个。结果保留在服务器 `deploy/article-body-live-previews.json`，不会提交帖子或调整账号调度。
 
 - `ssh_remote.py`：原生 SSH/SFTP，连接配置从被忽略的 `.private/ssh.json` 读取。
 - `package_release.py`：只打包后端生产构建、迁移文件、锁文件和前端静态构建。

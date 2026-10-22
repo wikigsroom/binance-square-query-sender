@@ -13,7 +13,8 @@ import {
 } from "./core.js";
 import { Http } from "./http.js";
 import { memeImageFields } from "./image-policy.js";
-import { writingHistory, writingRules } from "./writing-context.js";
+import { writingHistory, writingNews, writingRepair, writingRevision, writingRules } from "./writing-context.js";
+import { ARTICLE_POLICY_VERSION } from "./article-policy.js";
 import {
   protocolFor,
   providerHeaders,
@@ -21,8 +22,8 @@ import {
   textOutput,
 } from "./providers.js";
 
-export const PROMPT_VERSION = "square-author/1.3.0";
-const REVIEW_PROMPT_VERSION = "square-review/1.1.0";
+export const PROMPT_VERSION = "square-author/1.4.0";
+const REVIEW_PROMPT_VERSION = "square-review/1.2.0";
 function providerEvidence(connection: Row, model: Row) {
   return {
     requestMethod: "POST",
@@ -46,7 +47,7 @@ const systemPrompt = `你为本人管理的币安广场账号创作最终可发�
 task.requiredCashtags 是正文必须逐个原样出现的完整标签，每个只出现一次；裸写 BTC、ETH 不算 $BTC、$ETH。tokens 数组必须与 task.tokens 一致。标签应自然放进句子或段落，不要漏写，也不要增加未选币种的 $标签。
 requiredPercent 为 true 时，每币 claims 的 quote 必须独占对应一个代币和一个带正负号的百分比，并注明24小时窗口；为 false 时不用强加行情段落或百分比，已有数字仍须真实。
 引用新闻时，usedSourceIds 和 newsClaims.sourceId 必须复制提供这条证据的同一个 news 对象的 id；不能凭新闻顺序猜编号，不能把一条新闻的证据挂到另一条新闻的 id 上。newsClaims.quote 必须逐字复制你本次 text 中的连续片段，evidenceQuote 必须逐字复制该 id 对应 body 中的连续片段；不要改写证据，也不要把多处原文拼接成一句。一个长句无法完整对应时，拆成数条较短的 newsClaims。未使用新闻时两个新闻数组为空。
-返修时 repairErrors.previousDraft 是上一次完整 JSON，errors 是具体失败项。逐项修复，同时重新检查完整 outputContract；保留已经正确的标签、引用编号、证据和其他元数据，确保本次 quote 与本次正文仍逐字对应。matchingSourceIds 仅提示证据实际所在的新闻，重新阅读对应原文后再决定是否引用。所有文字和元数据均由你返回，程序不会替你补标签或改写正文。返回前自查，文字必须在硬上限内。`;
+返修时 repairErrors.previousDraft 是上一次完整 JSON，errors 是具体失败项。逐项修复，同时重新检查完整 outputContract；保留已经正确的标签、引用编号、证据和其他元数据，确保本次 quote 与本次正文仍逐字对应。若 task 或 repairErrors 标注 rewriteFromFacts，旧画面脚本已被排除，不要猜测、续写或复原旧稿；直接根据本次文字预设、新闻和行情重写完整文章及所有元数据。matchingSourceIds 仅提示证据实际所在的新闻，重新阅读对应原文后再决定是否引用。所有文字和元数据均由你返回，程序不会替你补标签或改写正文。返回前自查，文字必须在硬上限内。`;
 
 export class AI {
   constructor(
@@ -84,11 +85,12 @@ export class AI {
         content: JSON.stringify({
           stage: "review",
           promptVersion: REVIEW_PROMPT_VERSION,
+          articlePolicyVersion: ARTICLE_POLICY_VERSION,
           rules: writingRules(job.rules),
           text: content.text,
           contentHash: content.contentHash,
           facts: input.facts,
-          sources: input.snapshots.filter((s: Row) => s.type === "news"),
+          sources: writingNews(input.snapshots),
           historyForDiversityOnly: writingHistory(history),
         }),
       },
@@ -126,6 +128,7 @@ export class AI {
             reportedModel: raw.model || null,
             requestId: response.headers.get("x-request-id") || raw.id || null,
             promptVersion: REVIEW_PROMPT_VERSION,
+            articlePolicyVersion: ARTICLE_POLICY_VERSION,
             messages,
             requestBody: request.body,
             promptHash: hash(JSON.stringify(messages)),
@@ -179,6 +182,7 @@ export class AI {
         requestedModel: model.externalId,
         ...providerEvidence(connection, model),
         promptVersion: REVIEW_PROMPT_VERSION,
+        articlePolicyVersion: ARTICLE_POLICY_VERSION,
         messages,
         requestBody: request.body,
         contentHash: content.contentHash,
@@ -255,6 +259,7 @@ export class AI {
         content: JSON.stringify(
           {
             promptVersion: PROMPT_VERSION,
+            articlePolicyVersion: ARTICLE_POLICY_VERSION,
             presetVersionId: job.presetVersionId,
             rules: writingRules(job.rules),
             task: {
@@ -268,11 +273,12 @@ export class AI {
                   ),
                 ),
               ],
-              revision: job.revision || null,
-              baseText: job.baseText || null,
+              ...writingRevision(job),
             },
             outputContract: {
               tokenMetadata: input.tokens,
+              contentType: "article_body",
+              imageInstructionsAllowed: false,
               exactCashtagCount: job.rules.tagCount,
               eachCashtagExactlyOnce: true,
               maxUnicodeCharacters: job.rules.maxChars,
@@ -292,26 +298,10 @@ export class AI {
                 "sourceId 对应同一个 news.id；quote 原样存在于本次 text；evidenceQuote 原样存在于该条 news.body。",
             },
             facts: input.facts,
-            news: input.snapshots
-              .filter((s: Row) => s.type === "news")
-              .map((s: Row) => ({
-                id: s.id,
-                title: s.title,
-                url: s.url,
-                source: s.name,
-                attribution: s.attribution || s.name,
-                publishedAt: s.publishedAt,
-                publishedDate: s.publishedDate || s.publishedAt.slice(0, 10),
-                timezone: s.timezone || "UTC",
-                evidenceUrl: s.evidenceUrl || s.url,
-                readVia: s.readVia,
-                eventAt: s.eventAt,
-                relatedTokens: s.relatedTokens,
-                body: s.body,
-              })),
+            news: writingNews(input.snapshots),
             sourceWarnings: input.warnings,
             previousPostsForDiversityOnly: writingHistory(history),
-            repairErrors: repair,
+            repairErrors: writingRepair(repair),
           },
           null,
           2,
@@ -375,6 +365,7 @@ export class AI {
         requestedModel: model.externalId,
         ...providerEvidence(connection, model),
         promptVersion: PROMPT_VERSION,
+        articlePolicyVersion: ARTICLE_POLICY_VERSION,
         messages,
         requestBody: request.body,
         promptHash: hash(JSON.stringify(messages)),
@@ -402,6 +393,7 @@ export class AI {
           requestId: reportedRequestId || raw.id || null,
           identityEvidence: raw.model ? "provider_reported" : "request_only",
           promptVersion: PROMPT_VERSION,
+          articlePolicyVersion: ARTICLE_POLICY_VERSION,
           messages,
           requestBody: request.body,
           promptHash: hash(JSON.stringify(messages)),

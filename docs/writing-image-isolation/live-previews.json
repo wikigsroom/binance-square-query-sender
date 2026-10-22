@@ -1,0 +1,62 @@
+{
+  "verificationId": "article-body-guard-20261023",
+  "previews": [
+    {
+      "presetName": "Meme 整活｜狗狗与青蛙",
+      "presetId": "preset_1342492c-e791-4514-9b26-d3c2a0948f78",
+      "jobId": "job_b3c5062b-4d8f-4822-8f1f-dae33a86ab3b",
+      "state": "preview_ready",
+      "publishAttempts": 0,
+      "model": "gpt-6-luna",
+      "promptVersion": "square-author/1.4.0",
+      "text": "今天这三只 Meme 币像是约好了一起降温，区别只在谁先把围观群众劝回空调房。滚动24小时，$DOGE -5.06%；滚动24小时，$SHIB -4.62%；滚动24小时，$PEPE -5.97%。\n\n跌幅都不小，PEPE更深一点，但数字只说明这段时间的价格变化，不替我们解释原因。刷 Meme 可以图个乐，追着红绿跳来跳去，还是先别让手指比脑子快。",
+      "characterCount": 175,
+      "contentHash": "4555853a30e32cb51b1c12b37a6f88ab87fa9ac393b46d2c1a43271fa0e4e3e0",
+      "matchesAi": true,
+      "receivesImageRules": false,
+      "authorCalls": 1,
+      "validationPassed": true,
+      "articlePolicyVersion": "article-body-v1",
+      "assetId": "asset_48b8e3bc-15be-4885-a29f-83595854ddab",
+      "imagePolicyVersion": "industry-meme-v1",
+      "imageModelProvenance": "gpt_image_2",
+      "validationAttempts": [
+        {
+          "passed": true,
+          "errorCodes": [],
+          "articlePolicyVersion": "article-body-v1"
+        }
+      ]
+    },
+    {
+      "presetName": "GameFi 与应用｜先好玩再谈代币",
+      "presetId": "preset_3f45a874-f4c7-48ad-9508-998ebe2c10d5",
+      "jobId": "job_953ea515-a89e-44b9-b122-1f1997787c52",
+      "state": "preview_ready",
+      "publishAttempts": 0,
+      "model": "gpt-6-luna",
+      "promptVersion": "square-author/1.4.0",
+      "text": "奖励退去以后，玩家为什么还会回来？这个问题比“玩游戏能不能赚钱”更值得问。奖励能吸引人点开一次，却不一定让人下周还想打开；如果玩法本身没有值得重复的目标，资产能流通也未必能把体验变有趣。没有这轮可核实的应用消息，我不把代币跌幅写成用户流失或游戏运营出了问题。\n\n滚动24小时，$IMX -9.07%。滚动24小时，$GALA -5.97%。滚动24小时，$AXS -6.54%。这些数字描述的是各自的现货表现，不是玩家数量、留存率或游戏内消费的证据，也不能单独解释下跌原因。币价和产品表现相关，却不是同一张成绩单。\n\n要判断激励有没有帮到游戏，得看奖励少了之后还剩什么：目标是否有吸引力，和其他玩家互动是否有意思，获得的资产能否服务于实际体验。资产流通可能带来便利，但如果每一步都让人先算奖励，玩起来就像多了一份兼职。至于这些游戏现在是否真的留住了用户，现有材料不足，我不会替它们下结论。\n\n接下来我更想看到能核实的产品信息和用户数据，再讨论激励与留存的关系。奖励可以是入口，却不能代替好玩的理由；三种代币的短期涨跌，也不能替玩家回答“我为什么还要回来”。",
+      "characterCount": 478,
+      "contentHash": "75cc630574fb1bc7247214f7864f5f97e620dd45caaf75bcbd520b031ff70467",
+      "matchesAi": true,
+      "receivesImageRules": false,
+      "authorCalls": 2,
+      "validationPassed": true,
+      "articlePolicyVersion": "article-body-v1",
+      "validationAttempts": [
+        {
+          "passed": true,
+          "errorCodes": [],
+          "articlePolicyVersion": "article-body-v1"
+        }
+      ],
+      "assetId": "asset_29610148-a067-457b-ba06-2c3479203a0f",
+      "imagePolicyVersion": "industry-meme-v1",
+      "imageModelProvenance": "gpt_image_2"
+    }
+  ],
+  "checkedAt": "2026-10-23T05:53:05.322325+08:00",
+  "status": "passed",
+  "realPublications": 0
+}

@@ -32,7 +32,7 @@
 | [17 · 发布校验与发送优先](17-publication-validation-and-priority.md) | 成稿校验失败原因、内容问题改为提示、生产设置与恢复结果 |
 | [18 · 仓库整合交付](18-repository-delivery.md) | 单仓库、双语 README、技术图、20 张真实截图、83 项回归与凭据边界 |
 | [19 · 行业 meme 生图策略](19-industry-meme-image-policy.md) | 所有新生图仅限各行各业梗图、全局入口约束、随机场景及线上核验 |
-| [20 · 正文与生图上下文隔离](20-writing-image-context-isolation.md) | 正文混入梗图脚本的原因、历史污染、文字输入隔离及修复验证 |
+| [20 · 正文与生图上下文隔离](20-writing-image-context-isolation.md) | 梗图脚本原因、历史/改写/返修隔离、AI重写、最终发送边界与生产验收 |
 | [产品与技术图册](product/README.md) | 当前生产桌面/移动端、明暗主题、模块截图及 SVG |
 
 建议先阅读 00、01、08，再根据职责阅读其他文档。需求编号 R-01 至 R-06 对应用户六项原始要求；AC 编号对应可执行的验收案例。

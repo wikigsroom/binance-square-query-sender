@@ -8,7 +8,7 @@ This monorepo includes the frontend, backend, database schema, ten writing/image
 
 ![Production dashboard](docs/product/screenshots/02-overview-light.png)
 
-> Documentation baseline: October 22, 2026, Asia/Taipei. Application packages: `0.2.0`. Recorded production release: `20261023-text-image-isolation`. Screenshots show the actual deployed product earlier that day, before the meme-only image update; counters are capture-time observations. Credential display areas are masked. Real keys, administrator passwords, databases, and operational batches are excluded from Git.
+> Documentation baseline: October 22, 2026, Asia/Taipei. Application packages: `0.2.0`. Recorded production release: `20261023-article-body-guard`. Screenshots show the actual deployed product on October 22 before the meme-only image update; counters are capture-time observations. Credential display areas are masked. Real keys, administrator passwords, databases, and operational batches are excluded from Git.
 
 ## Contents
 
@@ -158,7 +158,7 @@ Each generation stores the rendered complete prompt and version, request URL, re
 
 ### Image provenance
 
-Only managed library images or approved GPT Image 2 job outputs are publishable. The service reads the real file, validates type/dimensions/aspect ratio/hash, records provenance and ingests it first. Presets choose library, generation or mixed selection and define empty-library/failure handling. All ten bundled presets request a fresh image per article and block on failure rather than substitute a placeholder. **Updated 2026-10-22: every newly generated image must be a meme/joke image about varied industries**, including manual jobs and legacy queued jobs. Runtime randomly chooses an industry and meme format and records the effective prompt, policy version and industry. Ordinary editorial illustrations and concept covers are excluded. See the [image policy](docs/19-industry-meme-image-policy.md). Author/reviewer requests receive text-only rules: image prompts stay out of text generation, and past posts with explicit image-script markers are excluded from writing context. See the [context-isolation fix](docs/20-writing-image-context-isolation.md).
+Only managed library images or approved GPT Image 2 job outputs are publishable. The service reads the real file, validates type/dimensions/aspect ratio/hash, records provenance and ingests it first. Presets choose library, generation or mixed selection and define empty-library/failure handling. All ten bundled presets request a fresh image per article and block on failure rather than substitute a placeholder. **Updated 2026-10-22: every newly generated image must be a meme/joke image about varied industries**, including manual jobs and legacy queued jobs. Runtime randomly chooses an industry and meme format and records the effective prompt, policy version and industry. Ordinary editorial illustrations and concept covers are excluded. See the [image policy](docs/19-industry-meme-image-policy.md). Author/reviewer requests receive text-only rules; image configuration goes to the image model independently. Explicit image scripts are excluded from history, revision bases and failed-draft repairs, prompting a complete AI rewrite using the original writing rules. Validation and both pre-upload and pre-intent gates share the same article boundary, including previously passed drafts. The service never removes paragraphs from a final body to make it pass. See the [context-isolation fix](docs/20-writing-image-context-isolation.md).
 
 ## Independent randomized scheduling
 
@@ -221,6 +221,7 @@ The portable [presets.json](app/content-presets/presets.json) contains full writ
 | Behavior | `strict` | `publish_first` |
 | --- | --- | --- |
 | Approved AI evidence, nonempty body, matching hash, hard character limit | Required | Required |
+| Explicit image briefs, image prompts or storyboard scripts | Bounded AI rewrite; stop this task after exhaustion | Same requirement; never downgraded to warnings |
 | Tags, market claims, news evidence/date/progress metadata | Blocking errors; bounded AI repair | Nonblocking warnings |
 | Banned words and historical similarity | Validated | Warnings retained |
 | Optional AI semantic review | Per preset | Not called |

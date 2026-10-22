@@ -1,4 +1,5 @@
 import type { Doc, Row } from "./core.js";
+import { imageBriefInBody } from "./article-policy.js";
 
 // Explicit text-only projection: future image fields cannot silently enter writing/review requests.
 const WRITING_FIELDS = [
@@ -9,13 +10,61 @@ const WRITING_FIELDS = [
 ] as const;
 
 export function writingRules(rules: Doc): Doc {
-  return Object.fromEntries(WRITING_FIELDS.filter((key) => key in rules).map((key) => [key, rules[key]]));
+  const projected = Object.fromEntries(WRITING_FIELDS.filter((key) => key in rules).map((key) => [key, rules[key]]));
+  if (Array.isArray(projected.sourceRules))
+    projected.sourceRules = projected.sourceRules.map((source: Doc) =>
+      Object.fromEntries(["sourceId", "required", "maxAgeSeconds", "priority"]
+        .filter((key) => key in source).map((key) => [key, source[key]])),
+    );
+  return projected;
 }
 
 // Exclude entire contaminated examples from model context. Published originals stay immutable.
 export function writingHistory(history: Row[]): string[] {
-  const imageBrief = /(?:^|\n)\s*(?:#{1,6}\s*)?(?:\*\*)?(?:(?:(?:行业|四格|双格|单格|反应|动物|职场|meme)\s*)?梗图(?:创意|设计|说明)?|配图(?:创意|建议|说明|描述|提示词)?|生图(?:提示词|要求|说明)?|图像提示词|图片(?:说明|描述)?|画面(?:描述|说明)?|分镜(?:说明)?|image\s*prompt)\s*(?:[：:]|可以画|可以是|可画成|建议画|画成|是一)/im;
-  return history.map((row) => row.text).filter((text): text is string =>
-    typeof text === "string" && !imageBrief.test(text),
-  ).slice(0, 40);
+  return [...new Set(history.map((row) => row.text).filter((text): text is string =>
+    typeof text === "string" && !!text.trim() && !imageBriefInBody(text),
+  ))].slice(0, 40);
+}
+
+export function writingRevision(job: Row): Doc {
+  const excluded = typeof job.baseText === "string" && !!imageBriefInBody(job.baseText);
+  return {
+    revision: job.revision || null,
+    baseText: excluded ? null : job.baseText || null,
+    ...(excluded ? { baseTextExcluded: "image_brief", rewriteFromFacts: true } : {}),
+  };
+}
+
+export function writingRepair(repair: Doc | null): Doc | null {
+  if (!repair || !imageBriefInBody(String(repair.previousDraft?.text || ""))) return repair;
+  // Do not echo the rejected script, its quotes, or stale claim metadata back to
+  // the author. Recreate the whole article and metadata from the same facts.
+  return {
+    previousDraft: null,
+    rewriteFromFacts: true,
+    errors: [{
+      code: "IMAGE_BRIEF_IN_BODY",
+      message: "上一稿混入了图片制作脚本，已从本次输入排除。请按文字预设、新闻和行情重新创作整篇正文及全部引用元数据，不写画面或角色故事脚本。",
+    }],
+    previousErrorCodes: [...new Set((repair.errors || []).map((issue: Doc) => issue.code))],
+  };
+}
+
+export function writingNews(snapshots: Row[]): Doc[] {
+  return snapshots.filter((source) => source.type === "news").map((source) => ({
+    id: source.id,
+    title: source.title,
+    url: source.url,
+    source: source.name,
+    name: source.name,
+    attribution: source.attribution || source.name,
+    publishedAt: source.publishedAt,
+    publishedDate: source.publishedDate || source.publishedAt?.slice(0, 10),
+    timezone: source.timezone || "UTC",
+    evidenceUrl: source.evidenceUrl || source.url,
+    readVia: source.readVia,
+    eventAt: source.eventAt,
+    relatedTokens: source.relatedTokens,
+    body: source.body,
+  }));
 }
