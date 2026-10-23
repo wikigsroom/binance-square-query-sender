@@ -33,11 +33,11 @@ try {
   for (const preset of pack.presets) {
     const card = cards.filter({ has: page.getByRole("heading", { name: preset.name, exact: true }) });
     assert.equal(await card.count(), 1);
-    assert.equal(await card.getByText("GPT Image 2", { exact: true }).count(), 1);
-    assert.equal(await card.getByText("PUBLISHED v1", { exact: true }).count(), 1);
+    assert.equal(await card.getByText("已有图库", { exact: true }).count(), 1);
+    assert.equal(await card.getByText(/^PUBLISHED v\d+$/).count(), 1);
     report.checks.presetNames.push(preset.name);
   }
-  report.checks.tenPublishedPresetsWithGeneration = true;
+  report.checks.tenPublishedPresetsWithLibraryOnly = true;
   await page.screenshot({ path: fileURLToPath(new URL("production-presets.png", output)), fullPage: true });
   const sample = pack.presets.find((p) => p.key === "feature-essay");
   const sampleCard = cards.filter({ has: page.getByRole("heading", { name: sample.name, exact: true }) });
@@ -49,7 +49,8 @@ try {
   assert.equal(await dialog.getByLabel("硬上限（含空白和标签）", { exact: true }).inputValue(), "2000");
   report.checks.essayLengthRulesVisible = true;
   await dialog.getByRole("tab", { name: "配图规则", exact: true }).click();
-  assert.equal(await dialog.getByLabel("图片来源", { exact: true }).inputValue(), "generate");
+  assert.equal(await dialog.getByLabel("图片来源", { exact: true }).inputValue(), sample.rules.image.mode);
+  assert.equal(await dialog.getByLabel("图库匹配为空时", { exact: true }).inputValue(), sample.rules.image.fallback);
   assert.equal(await dialog.getByLabel("风格", { exact: true }).inputValue(), sample.rules.image.style);
   assert.equal(await dialog.getByLabel("生图要求", { exact: true }).inputValue(), sample.rules.image.prompt);
   assert.equal(await dialog.getByLabel("批准的 GPT Image 2 模型", { exact: true }).inputValue(), imported.models.image.id);

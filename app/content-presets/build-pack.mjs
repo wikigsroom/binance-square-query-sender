@@ -151,10 +151,10 @@ const presets = profiles.map((p) => ({
     factsMaxAgeSeconds: 900,
     material: p.material + "\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
     image: {
-      mode: "generate", collection: p.name, tags: p.imageTags, style: p.style,
+      mode: "library", collection: p.name, tags: p.imageTags, style: p.style,
       aspectRatio: "1:1", reuseSeconds: 86400, modelId: "@default",
       prompt: p.imagePrompt + "\n" + imageGuardrails,
-      parameters: { size: "1024x1024", quality: "medium" }, fallback: "block",
+      parameters: { size: "1024x1024", quality: "medium" }, fallback: "any_library",
     },
     bannedWords: ["情绪", "情感", "心态", "翻译腔"],
     qualityHints: [
@@ -170,9 +170,9 @@ const presets = profiles.map((p) => ({
   },
 }));
 const pack = {
-  packId: "industry-memes-10-20261022", version: 2,
+  packId: "library-only-10-20261023", version: 3,
   textModelExternalId: "gpt-6-luna", imageModelExternalId: "gpt-image-2.5",
-  imagePolicy: "Only memes and joke images about varied industries may be generated. Every publication requests one fresh approved-model image; no library fallback. Runtime policy: industry-meme-v1.",
+  imagePolicy: "Library only: randomly reuse an existing matching image, or another available managed image if no match exists. Never generate an image for these presets. Retained generation prompts are inactive; separately requested generation remains subject to industry-meme-v1.",
   presets,
 };
 await mkdir(directory, { recursive: true });

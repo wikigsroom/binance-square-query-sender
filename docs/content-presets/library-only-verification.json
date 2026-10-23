@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-23T14:55:32.154297+08:00",
+  "presetCount": 10,
+  "publishedLibraryOnly": 10,
+  "draftLibraryOnly": 10,
+  "paused": false,
+  "newImageModelCalls": 0,
+  "recentLibraryJobs": [
+    {
+      "id": "job_4419fdf5-e1eb-46f5-ae19-2323a395fbb3",
+      "state": "published",
+      "image_mode": "library",
+      "post_url": "https://app.binance.com/uni-qr/cpos/380301740893481?r=QZ51879T&l=zh-CN"
+    },
+    {
+      "id": "job_d8a16087-5243-4b99-bf9a-7b2a3b9f91c1",
+      "state": "published",
+      "image_mode": "library",
+      "post_url": "https://app.binance.com/uni-qr/cpos/380301561671312?r=VNUKVAYK&l=zh-CN"
+    }
+  ]
+}

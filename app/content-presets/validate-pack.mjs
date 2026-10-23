@@ -16,8 +16,8 @@ assert.equal(new Set(pack.presets.map((p) => p.rules.image.style)).size, 10);
 const checks = pack.presets.map((preset) => {
   const rules = parseRules(preset.rules);
   assert.deepEqual(rules, preset.rules, `${preset.key}: schema must preserve every field`);
-  assert.equal(rules.image.mode, "generate");
-  assert.equal(rules.image.fallback, "block");
+  assert.equal(rules.image.mode, "library");
+  assert.equal(rules.image.fallback, "any_library");
   assert.ok(rules.image.prompt.length > 100);
   assert.match(rules.image.prompt, /只允许生成各行各业的 meme 梗图/);
   assert.match(rules.image.style, /meme 梗图/);

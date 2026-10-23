@@ -90,7 +90,7 @@ try:
     for item in pack['presets']:
         rules = copy.deepcopy(item['rules'])
         rules['modelId'], rules['image']['modelId'] = text_model['id'], image_model['id']
-        assert rules['image']['mode'] == 'generate' and rules['image']['fallback'] == 'block'
+        assert rules['image']['mode'] == 'library' and rules['image']['fallback'] == 'any_library'
         assert rules['preferredMin'] <= rules['preferredMax'] <= rules['maxChars']
         assert set(rules['parameters']) <= set(text_model['allowedParameters'])
         assert set(rules['image']['parameters']) <= set(image_model['allowedParameters'])
@@ -116,7 +116,7 @@ try:
         if not row['publishedVersionId']:
             row, _ = call('POST', f"/presets/{row['id']}/publish-version", {
                 'expectedVersion': row['version'],
-                'changeNote': '10种独立内容方向：指定文字模型逐篇成稿，指定生图模型逐篇生成新配图。包 ' + pack['packId'],
+                'changeNote': '10种独立内容方向：指定文字模型逐篇成稿，只随机使用已有图库，不调用生图。包 ' + pack['packId'],
             }, pack['packId'] + ':' + item['key'] + ':publish')
         detail = read('/presets/' + row['id'])
         version = read(f"/presets/{row['id']}/versions/{detail['publishedVersionId']}")

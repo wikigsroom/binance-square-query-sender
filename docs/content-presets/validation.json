@@ -1,7 +1,7 @@
 {
-  "packId": "industry-memes-10-20261022",
-  "checkedAt": "2026-10-22T07:08:34.516Z",
-  "sha256": "790bb5bd16ce5f420f571ffaceb827ab99bbef35db4c008a117dace805db12a4",
+  "packId": "library-only-10-20261023",
+  "checkedAt": "2026-10-23T06:54:42.960Z",
+  "sha256": "da4359dbb6235484060c88e6c77ccc77d1ebfca677f91b91d2d07e483a97fdfd",
   "schema": "square-service parseRules",
   "status": "passed",
   "count": 10,
@@ -15,8 +15,8 @@
         180
       ],
       "hardLimit": 220,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "涂鸦反应 meme 梗图"
     },
     {
@@ -28,8 +28,8 @@
         230
       ],
       "hardLimit": 280,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "期待现实 meme 梗图"
     },
     {
@@ -41,8 +41,8 @@
         650
       ],
       "hardLimit": 800,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "听说实况 meme 梗图"
     },
     {
@@ -54,8 +54,8 @@
         1800
       ],
       "hardLimit": 2000,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "四格反转 meme 梗图"
     },
     {
@@ -67,8 +67,8 @@
         700
       ],
       "hardLimit": 900,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "夸张摆拍 meme 梗图"
     },
     {
@@ -80,8 +80,8 @@
         750
       ],
       "hardLimit": 950,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "越帮越忙 meme 梗图"
     },
     {
@@ -93,8 +93,8 @@
         550
       ],
       "hardLimit": 700,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "忙闲对照 meme 梗图"
     },
     {
@@ -106,8 +106,8 @@
         700
       ],
       "hardLimit": 900,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "工具反客为主 meme 梗图"
     },
     {
@@ -119,8 +119,8 @@
         600
       ],
       "hardLimit": 750,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "动物打工 meme 梗图"
     },
     {
@@ -132,8 +132,8 @@
         550
       ],
       "hardLimit": 700,
-      "imageMode": "generate",
-      "imageFallback": "block",
+      "imageMode": "library",
+      "imageFallback": "any_library",
       "imageStyle": "一句话破功 meme 梗图"
     }
   ]

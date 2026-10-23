@@ -1,9 +1,9 @@
 {
-  "packId": "industry-memes-10-20261022",
-  "version": 2,
+  "packId": "library-only-10-20261023",
+  "version": 3,
   "textModelExternalId": "gpt-6-luna",
   "imageModelExternalId": "gpt-image-2.5",
-  "imagePolicy": "Only memes and joke images about varied industries may be generated. Every publication requests one fresh approved-model image; no library fallback. Runtime policy: industry-meme-v1.",
+  "imagePolicy": "Library only: randomly reuse an existing matching image, or another available managed image if no match exists. Never generate an image for these presets. Retained generation prompts are inactive; separately requested generation remains subject to industry-meme-v1.",
   "presets": [
     {
       "key": "meme-club",
@@ -56,7 +56,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "笑点来自本轮真实涨跌反差、市场叙事和人的反应。未经证实的庄家行为只能当疑问。没有直接相关新闻时只写看盘感受，不强凑利好。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "Meme 整活｜狗狗与青蛙",
           "tags": [
             "meme",
@@ -71,7 +71,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -141,7 +141,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "榜单是现货滚动24小时、有成交的USDT交易对，不是自然日、合约榜或未来预测。可以用已经读取且直接相关的新闻补充其中一币，不能给另外两币套同一原因。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "涨跌榜现场｜散户碎碎念",
           "tags": [
             "meme",
@@ -156,7 +156,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -229,7 +229,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "至少使用一条实际读取的相关新闻，不能用新闻标题替代正文。提案、申请、测试、获批和正式上线必须区分。资金、流量或监管数字写清单位和统计范围；没有给定数字就不用。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "News 拆解｜消息到底改变了什么",
           "tags": [
             "meme",
@@ -244,7 +244,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -316,7 +316,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "事实锚点来自近72小时已读取新闻。一般机制解释应克制，新闻未给出的用户数、营收、TVL、机构持仓、产品细节与历史数据不得编造。篇幅用于论证，不用于重复风险提示；至少有一个事实、一个解释和一个可能推翻观点的条件。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "精品长文｜把一件事讲透",
           "tags": [
             "meme",
@@ -331,7 +331,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -402,7 +402,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "只把已给定材料中的ETF净流入、净流出、持仓及政策进展当事实；没有原始数据不画供需结论，不用给定源以外的实时利率、美元指数或美债收益率。必须准确带出BTC的滚动24小时涨跌幅。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "比特币宏观｜资金为什么动",
           "tags": [
             "meme",
@@ -417,7 +417,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -491,7 +491,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "区分手续费收入和代币激励，存量和流量，治理提案和已执行。没有可靠资料不得写当前TVL、APY、清算阈值、安全审计结果或协议已经采用某项机制。没有相关新闻时写基于行情的提问与一般风险框架，不编操作体验。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "以太坊与 DeFi｜收益从哪里来",
           "tags": [
             "meme",
@@ -506,7 +506,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -580,7 +580,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "优先使用与SOL、JUP、RAY直接相关的快讯。活动量、机器人行为、激励与留存要分开；没有统计材料就不说用户增长、网络故障、性能或收入创新高。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "Solana 生态｜热闹有没有留下用户",
           "tags": [
             "meme",
@@ -595,7 +595,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -669,7 +669,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "只有材料明确给出时才写算力利用率、客户、收入、合作方、模型能力或正式产品进度。一般性原理可以解释，但不能假称某项目已有特定客户、硬件规模或技术突破。三币带符号涨跌幅与滚动24小时口径必须准确。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "AI 与 DePIN｜先看需求再听故事",
           "tags": [
             "meme",
@@ -684,7 +684,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -758,7 +758,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "新闻可选。没有直接报道时用本轮行情提出具体的产品评价问题，不能补造DAU、下载量、收入、版本更新、联名或游戏内经济。标题和内容都不要暗示已亲测。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "GameFi 与应用｜先好玩再谈代币",
           "tags": [
             "meme",
@@ -773,7 +773,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",
@@ -843,7 +843,7 @@
         "factsMaxAgeSeconds": 900,
         "material": "新闻只用直接关联的已读取材料。没有订单簿、解锁表、持仓集中度或资金链证据，不声称这些数据恶化；可以明确说要进一步核对。价格变化本身不足以证明内幕、操盘或项目破产。\n以上是写作要求，不是可当作新闻事实引用的材料。正文由指定模型独立成稿，不复用整段模板，不伪造仓位、交易经历、内幕或收益。来源、日期、数字、单位和事件进展须与本轮证据一致。",
         "image": {
-          "mode": "generate",
+          "mode": "library",
           "collection": "逆向审视｜热闹里找漏洞",
           "tags": [
             "meme",
@@ -858,7 +858,7 @@
             "size": "1024x1024",
             "quality": "medium"
           },
-          "fallback": "block"
+          "fallback": "any_library"
         },
         "bannedWords": [
           "情绪",

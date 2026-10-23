@@ -26,7 +26,7 @@
 | [11 · 远程部署记录](11-remote-deployment.md) | 生产目录、API 端口、管理员交付、待配置代理和验证结果 |
 | [12 · 素材与新闻来源升级](12-sources-and-market-upgrade.md) | 金色、律动、币安现货的真实读取、搜索筛选、来源证据、生产升级与验收 |
 | [13 · 仅 Key 批量导入账号](13-key-only-account-import.md) | 单列 API Key 输入、自动名称、逐行结果与生产验收 |
-| [14 · 10 种内容预设与生图](14-ten-content-presets.md) | Meme、新闻、精品长文等方向、独立生图要求、篇幅与线上版本 |
+| [14 · 10 种内容预设与配图](14-ten-content-presets.md) | Meme、新闻、精品长文等方向、只用已有图库、篇幅与线上版本 |
 | [15 · 账号预设保存跨域修复](15-account-bindings-cors-fix.md) | 修复 PUT 预检遗漏，覆盖预设绑定、随机周期和跨域浏览器回归 |
 | [16 · 全账号自动发送启用](16-auto-publishing-enabled.md) | 复用样例的8个等权预设、20—40分钟独立随机周期与实际发布开关 |
 | [17 · 发布校验与发送优先](17-publication-validation-and-priority.md) | 成稿校验失败原因、内容问题改为提示、生产设置与恢复结果 |
